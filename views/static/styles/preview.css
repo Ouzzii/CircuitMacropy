@@ -1,0 +1,48 @@
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+.preview{
+    min-width: 400px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.preview #preview{
+    overflow: auto;
+    width: 100%;
+    height: calc(100% - 50px);
+}
+
+
+
+
+.preview .buttons{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.preview .previewTabs{
+width: 100%;
+height: calc(100% - 50px);
+padding: 0px !important;
+}
+.preview ul{
+    width: 100%;
+    height: 45px;
+}
+
+
+
+
+
+.preview canvas{
+    overflow: hidden;
+}
