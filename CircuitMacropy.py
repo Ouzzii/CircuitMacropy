@@ -4,14 +4,15 @@ from json import load, dump
 import os
 from modules.createCircuitMacros import createCircuitMacros as csm
 from tkinter import filedialog
+from base64 import b64encode
 
-projectPath = __file__.split('server.py')[0]
+projectPath = os.path.dirname(os.path.abspath(__file__))
 
 def writeConf(data):
-    with open(projectPath+'configurations.json', 'w', encoding='utf-8')as f:
+    with open(projectPath+'\\configurations.json', 'w', encoding='utf-8')as f:
         dump(data, f, indent=2, ensure_ascii=False)
 def readConf():
-    with open(projectPath+'configurations.json', encoding='utf-8')as f:
+    with open(projectPath+'\\configurations.json', encoding='utf-8')as f:
         return load(f)
 
 @eel.expose
@@ -61,6 +62,19 @@ def getcontent(parent, file):
     return '0'
 
 
+@eel.expose
+def getpdf(path):
+    for root, dirs, files in os.walk(readConf()['workspaceFolder']):
+        if root.endswith(path.split('\\')[1]) and path.split('\\')[2] in files:
+            filename = os.path.join(root, path.split('\\')[2])
+        elif path.split('\\')[1] == 'R0000T':
+            filename = os.path.join(root, path.split('\\')[2])
+    #return {'fullpath': filename}
+    print(filename)
+    with open(filename, 'rb')as f:
+        return b64encode(f.read()).decode('utf-8')
+    
+
 
 """
 @app.route('/get_pdf', methods=['POST'])
@@ -80,5 +94,5 @@ def getPDF():
 """
 
 
-eel.init('views')
-eel.start('main.html', size=(1366,743))
+eel.init('assets')
+eel.start('/html/main.html', size=(1366,743))
