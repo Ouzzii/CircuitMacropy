@@ -73,25 +73,7 @@ def getpdf(path):
     print(filename)
     with open(filename, 'rb')as f:
         return b64encode(f.read()).decode('utf-8')
-    
 
-
-"""
-@app.route('/get_pdf', methods=['POST'])
-def getPDF():
-    if request.method == 'POST':
-        path = request.json['path']
-        print(path.split('\\'))
-        print(path.split('/'))
-        for root, dirs, files in walk(readConf()['workspaceFolder']):
-            if root.endswith(path.split('\\')[1]) and path.split('\\')[2] in files:
-                filename = os.path.join(root, path.split('\\')[2])
-            elif path.split('\\')[1] == 'R0000T':
-                filename = os.path.join(root, path.split('\\')[2])
-        #return {'fullpath': filename}
-        return send_file(filename)
-
-"""
 
 
 eel.init('assets')
