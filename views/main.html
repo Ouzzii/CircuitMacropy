@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>M4Editor by Ouzzii</title>
+    <link rel="stylesheet" href='/static/styles/mainpage.css'>
+    <link rel="stylesheet" href='/static/styles/treeview.css'>
+    <link rel="stylesheet" href='/static/styles/editor.css'>
+    <link rel="stylesheet" href='/static/styles/preview.css'>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script type="text/javascript" src="/eel.js"></script>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="treeview">
+            <div class='notopen' id="openfolder">
+                <button style='display: none;'>Klasör Seç</button>
+                <iframe class='waiting' src='/static/html/loading.html'></iframe>
+            </div>
+            <div class="settings">
+                <img src='https://cdn-icons-png.flaticon.com/512/1544/1544733.png'>
+                <img src='https://cdn-icons-png.flaticon.com/512/5828/5828474.png'>
+            </div>
+        </div>
+        <div class="editor">
+            <ul>
+            </ul>
+        </div>
+        <div class="preview">
+
+            <div class="previewTabs">
+                <ul>
+
+                </ul>
+                <div id="preview">
+                    <canvas id="the-canvas"></canvas>
+                </div>
+            </div>
+
+
+            <div class="buttons">
+                <div class="buttonGroupA">
+                    <button class="previousPage">
+                        < </button>
+                </div>
+                <div class="zoom">
+                    <button id="zoomOut">-</button>
+                    <a id="pageNum">1</a>
+                    <a id="zoom"></a>
+                    <button id="zoomIn">+</button>
+
+                </div>
+                <div class="buttonGroupB">
+                    <button class="nextPage">></button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.7.570/build/pdf.min.js"></script>
+    <script src='../static/scripts/script.js'"></script>
+    <script src='../static/scripts/previewpdf.js'></script>
+    <script src='../static/scripts/pdfpreview.js'></script>
+    <script src='../static/scripts/tree.js'></script>
+
+</body>
+
+</html>
