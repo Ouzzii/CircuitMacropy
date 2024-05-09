@@ -1,0 +1,61 @@
+.treeview{
+    min-width: 200px;
+    max-width: 400px;
+    width: auto;
+    /*width: 20%;*/
+    height: 100%;
+    background: gray;
+    user-select: none;
+}
+
+
+.dir{
+    background-color: red;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.file{
+    background-color: aquamarine;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.treeview iframe.waiting{
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+.treeview .notopen{
+    width: 100%;
+    height: calc(100% - 35px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.treeview .settings{
+    display: flex;
+    justify-content: flex-end;
+    height: 35px;
+    width: 100%;
+}
+
+.treeview .settings img{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.treeview .filesfolders{
+    height: calc(100% - 35px - 22px);
+    overflow-y: auto;
+}
+.treeview .treeViewTitle{
+    margin: 0px !important;
+}
+
+
+.treeview .dir.closed div{
+    display: none;
+}
