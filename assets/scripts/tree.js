@@ -69,13 +69,13 @@ function treeTitle(title) {
     return `<h3 class='treeViewTitle'>~/${title}</h3>`
 }
 function folder(key) {
-    return `<div class='dir' id='${key.dir.split('\\')[1]}'><a>~/${key.dir}</a></div>`
+    return `<div class='dir closed' id='${key.dir.split('\\')[1]}'><a>~/${key.dir}</a></div>`
 }
 function file(key) {
     return `<div class='file' id='${key.file}'><a>${key.file}</a></div>`
 }
 function subFolder(key, layer) {
-    return `<div class='dir' style='padding-left:${layer * 10}px' id='${key}'><a>~/${key}</a></div>`
+    return `<div class='dir closed' style='padding-left:${layer * 10}px' id='${key}'><a>~/${key}</a></div>`
 }
 function subFile(key, layer) {
     return `<div class='file' style='padding-left:${layer * 10}px' id='${key}'><a>${key}</a></div>`
@@ -162,11 +162,12 @@ $('body').on('click', '.dir a', function(){
 
 async function getFileContent(file, parentdir, id) {
     if (parentdir!='R0000T'){
-    var parent = 'parentdir'
+    var parent = parentdir
 }else{
     var parent = 'R0000T'
 }
     const data = eel.getcontent(parent, file)(function(fileContent){
+        console.log(fileContent)
         var content = fileContent.content
         var fullpath = fileContent.fullpath
         if (id[1] != 0){

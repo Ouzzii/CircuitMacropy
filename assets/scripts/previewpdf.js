@@ -173,9 +173,9 @@ function Derle(derlenecekler){
 
 
 $('body').on('click', ".Derle button", function(element){
-  $('#waiting').css('visibility', "visible")
+  //$('#waiting').css('visibility', "visible")
 
-  Derle(Derlenenecekler())
+  //Derle(Derlenenecekler())
 
   
   //$('#waiting').css('visibility', "hidden")
