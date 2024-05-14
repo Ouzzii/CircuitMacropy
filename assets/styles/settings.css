@@ -1,0 +1,95 @@
+
+#settings{
+    z-index: 100;
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    background-color: bisque;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+
+}
+
+
+.settingTabs{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex !important;
+    flex-direction: column;
+    padding: 0% !important;
+}
+
+.settingTabs div.ui-tabs-panel{
+    height: 100%;
+    overflow: auto;
+    background-color: #007fff !important;
+}
+
+.settingTabs ul{
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 !important;
+}
+.settingTabs ul li:first-child{
+    border-top-left-radius: 5px !important;
+}
+.settingTabs ul li:last-child{
+    border-top-right-radius: 5px !important;
+}
+.settingTabs li{
+    border-radius: 0px;
+    border: none;
+}
+
+
+::-webkit-scrollbar{
+    height: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: #007fff;
+}
+::-webkit-scrollbar-thumb{
+    background:#ff8000;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.inputAndinfo{
+    height: 25px !important;
+    display: flex;
+    align-items: center;
+}
+
+.textInfo{
+    height: 25px;
+    width: 25px;
+    padding-left: 5px;
+}
+.textInfo:hover{
+    cursor: pointer;
+
+}
+
+#info{
+    position: relative;
+}
+
+
+.hidden{
+    display: none;
+}
+
+.apply{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.apply button{
+    margin-bottom: 5px;
+    margin-right: 5px;
+    float: right;
+}

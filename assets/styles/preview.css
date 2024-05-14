@@ -3,6 +3,7 @@ body {
     overflow: hidden;
 }
 .preview{
+    z-index: 0;
     min-width: 400px;
     height: 100%;
     width: 100%;
