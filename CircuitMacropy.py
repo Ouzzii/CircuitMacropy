@@ -8,6 +8,9 @@ from base64 import b64encode
 
 projectPath = os.path.dirname(os.path.abspath(__file__))
 
+with open('info.json', encoding='utf-8')as f:
+    infoJson = load(f)
+
 def writeConf(data):
     with open(projectPath+'\\configurations.json', 'w', encoding='utf-8')as f:
         dump(data, f, indent=2, ensure_ascii=False)
@@ -20,6 +23,29 @@ def createCircuitMacros():
     csm()
     return {'message': 'success'}
 
+@eel.expose
+def getinfo(infoname):
+    return infoJson[infoname]
+
+@eel.expose
+def getJunkFiles():
+    conf = readConf()
+    if 'junkfiles' in list(conf.keys()):
+        return conf['junkfiles']
+    else:
+        return ''
+
+@eel.expose
+def applySettings(junkfiles):
+    
+    conf = readConf()
+    conf['junkfiles'] = junkfiles
+    writeConf(conf)
+@eel.expose
+def getSettings():
+    with open('assets/html/settings.html', encoding='utf-8') as f:
+        return f.read()
+    
 @eel.expose
 def openfolder():
     conf = readConf()
@@ -75,6 +101,15 @@ def getpdf(path):
         return b64encode(f.read()).decode('utf-8')
 
 
+@eel.expose
+def compiletex():
+    pass
+@eel.expose
+def compilem4():
+    pass
+
+
 
 eel.init('assets')
 eel.start('/html/main.html', size=(1366,743))
+#eel.start('/html/main.html', size=(960,520))
