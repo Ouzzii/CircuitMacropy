@@ -4,5 +4,6 @@
   "m4flag": "pgf.m4",
   "dpicflag": "-g",
   "CircuitMacrosPath": "C:\\Users\\ozank\\CMEditor\\Circuit_macros10_5_6",
-  "workspaceFolder": "F:/m4"
+  "workspaceFolder": "F:/m4",
+  "junkfiles": ".aux"
 }
