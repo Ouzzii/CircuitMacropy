@@ -6,7 +6,17 @@ from json import dump, load
 import zipfile
 
 
-projectPath = '/'.join(__file__.split('\\')[:-2])+'/'
+if platform != 'linux':
+    if os.path.exists('/'.join(__file__.split('\\')[:-2])+'\\'):
+        projectPath = '/'.join(__file__.split('\\')[:-2])+'\\'
+    else:
+        projectPath = '/'.join(__file__.split('\\')[:-2])+'\\..\\'
+else:
+    if os.path.exists('/'.join(__file__.split('/')[:-2])+'/'):
+        projectPath = '/'.join(__file__.split('/')[:-2])+'/'
+    else:
+        '/'.join(__file__.split('/')[:-2])+'/../'
+
 
 
 def writeConf(data):
@@ -67,6 +77,8 @@ def createCircuitMacros():
             #    f.write(get(m4Url).content)
             #with open(circuitmacrospath+'/dpic.exe', 'wb')as f:
             #    f.write(get(dpicUrl).content)
+        else:
+            circuitmacrospath = os.environ['ZDOTDIR']+'/CMEditor/' + os.listdir(os.environ['ZDOTDIR']+'/CMEditor/')[-1]
     conf = readConf()
     if platform == 'linux':
         conf['dpicengine'] = 'dpic'
