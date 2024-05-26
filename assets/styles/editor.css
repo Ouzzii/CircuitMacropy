@@ -4,7 +4,8 @@ body{
 }
 
 .editor{
-    min-width: 400px;
+    background-color: var(--treeviewBackground) !important;
+    min-width: 300px;
     height: calc(100% - 2px);
     width: 100%;
     display: flex;
@@ -14,10 +15,30 @@ body{
 }
 
 .editor ul{
+    background-color: var(--fileHoverBackground);
     height: 45px;
     display: flex;
     overflow-x: auto !important;
     overflow-y: hidden;
+    border: none;
+}
+.editor li{
+    border: none !important;
+    background-color: var(--treeviewBackground) !important;
+}
+.editor li a{
+    color: var(--fileHoverForeground) !important;
+}
+
+.editor .ui-state-active{
+    background-color: var(--fileHoverForeground) !important;
+}
+.editor .ui-state-active a{
+    color: var(--fileHoverBackground) !important;
+}
+
+.editor li img{
+    padding-right: 5px;
 }
 
 .editor div{
@@ -46,6 +67,7 @@ body{
     display: flex;
     text-align: right;
     align-items: center;
+    justify-content: flex-end;
 }
 .editor .waiting{
     transition: .5;
@@ -63,4 +85,42 @@ body{
 .editorTabs{
     display: flex;
     align-items: center;
+}
+
+
+
+#compileas{
+    height: 40px;
+    border-right: 0px;
+    background: #e7e6e6;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    border: 1px solid transparent;
+    padding: 8px 16px;
+
+}
+#withcompile{
+    height: 40px;
+    border-right: 0px;
+    background: #e7e6e6;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    border: 1px solid transparent;
+    padding: 8px 16px;
+}
+#compile{
+    height: 40px;
+    border-left: 0px;
+    background: #ddd;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    border: 1px solid transparent;
+    padding: 8px 16px;
+
+}
+
+
+
+#willcompile{
+    margin: 0;
+    height: 40px;
+    width: 40px;
+    padding: 20px;
 }

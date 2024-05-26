@@ -1,25 +1,42 @@
+html, body, *{
+    font-family: "Fira Code", Menlo, Consolas, Monaco, "Lucida Console", Monospace;
+}
+
+
+
+
 .treeview{
+    
     z-index: 0;
     min-width: 200px;
     max-width: 400px;
-    width: auto;
+    width: 50%;
     /*width: 20%;*/
     height: 100%;
-    background: gray;
+
+    background-color: var(--treeviewBackground);;
     user-select: none;
 }
 
 
 .dir{
-    background-color: red;
+
     padding-bottom: 10px;
     cursor: pointer;
 }
 
 .file{
-    background-color: aquamarine;
-    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--fileForeground);
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     cursor: pointer;
+}
+.file:hover{
+    color: var(--fileHoverForeground);
+    background-color: var(--fileHoverBackground);
 }
 
 .treeview iframe.waiting{
@@ -49,14 +66,63 @@
 }
 
 .treeview .filesfolders{
-    height: calc(100% - 35px - 22px);
+    height: calc(100% - 35px - 22px - 25px);
     overflow-y: auto;
+    overflow-x: hidden;
 }
-.treeview .treeViewTitle{
+
+
+.treeViewTitle{
+    display: flex;
+    justify-content: space-between;
+}
+
+.treeview .treeViewTitle h3{
     margin: 0px !important;
+    margin-top: 15px !important;
+    margin-bottom: 10px !important;
+    padding-left: 15px;
+    color: var(--treeviewTitle);
 }
 
+.treeViewTitle .icons img{
+    margin-top: 15px;
+    height: 22px;
+}
 
+.icons{
+    padding-right: 15px;
+}
 .treeview .dir.closed div{
     display: none;
+}
+
+.icons img{
+    cursor: pointer;
+}
+
+#new{
+    display: flex;
+    justify-content: center;
+    margin-right: 5px;
+}
+#new label{
+    text-wrap: nowrap;
+    padding-right: 5px;
+    padding-left: 10px;
+    color: var(--fileHoverForeground);
+}
+#new input{
+    max-width: calc(100% - 112px);
+    border: none;
+    outline: none;
+    padding-right: 5px;
+    flex-grow: 1;
+    background-color: var(--fileHoverForeground);
+    color: var(--treeviewBackground);
+}
+
+.dots{
+    height: 20px;
+    width: 20px;
 }

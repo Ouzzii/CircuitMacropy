@@ -1,0 +1,12 @@
+#settings{
+    z-index: 100;
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    background-color: bisque;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+
+}

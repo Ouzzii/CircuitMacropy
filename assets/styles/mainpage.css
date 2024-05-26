@@ -9,3 +9,7 @@ body{
     display: flex;
     flex-direction: row;
 }
+
+a{
+    user-select: none;
+}
