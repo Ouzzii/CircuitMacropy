@@ -5,7 +5,6 @@ for i in range(2):
         import eel.chrome
         from json import load, dump
         import os
-        from modules.createCircuitMacros import createCircuitMacros as csm
         from tkinter import filedialog
         from base64 import b64encode
         from subprocess import Popen, PIPE
@@ -13,7 +12,10 @@ for i in range(2):
         break
     except ImportError:
         import os
-        os.system('python3.10 -m pip install Eel requests bs4')
+        os.system('python3.10 -m pip install Eel requests bs4 gitpython')
+
+from modules.createCircuitMacros import createCircuitMacros as csm
+from modules import autoUpdate
 
 if ".pyz" in __file__:
     projectPath = os.path.dirname(os.path.abspath("CircuitMacropy.pyz"))
@@ -21,7 +23,6 @@ else:
     projectPath = os.path.dirname(os.path.abspath(__file__))
 
 global pdflatex_path
-
 
 
 
