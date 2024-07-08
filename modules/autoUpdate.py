@@ -25,8 +25,7 @@ def move_all_files_and_folders(src_dir, dest_dir):
 def update():
     repo_url = 'https://github.com/Ouzzii/CircuitMacropy.git'
     local_dir = os.getcwd()
-    shutil.rmtree(local_dir)
-    os.mkdir(local_dir)
+    clearDirectory(local_dir)
     pygit2.clone_repository(repo_url, local_dir)
 
 

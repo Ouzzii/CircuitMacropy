@@ -1,3 +1,5 @@
+#newfile
+
 # pip install Eel requests bs4
 for i in range(2):
     try:
@@ -24,9 +26,9 @@ else:
 
 global pdflatex_path
 
-
+print('versiyon')
 checkUpdate(version)
-
+print('versiyon biti')
 if platform == 'linux':
     m4executable = 'm4'
     dpicexecutable = 'dpic'
