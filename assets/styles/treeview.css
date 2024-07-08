@@ -104,6 +104,7 @@ html, body, *{
 #new{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     margin-right: 5px;
 }
 #new label{
@@ -113,14 +114,19 @@ html, body, *{
     color: var(--fileHoverForeground);
 }
 #new input{
-    max-width: calc(100% - 112px);
+    max-width: 100%;
     border: none;
     outline: none;
     padding-right: 5px;
+    margin-left: 10px;
     flex-grow: 1;
     background-color: var(--fileHoverForeground);
     color: var(--treeviewBackground);
 }
+
+
+
+
 
 .dots{
     height: 20px;
