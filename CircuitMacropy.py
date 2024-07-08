@@ -15,7 +15,7 @@ for i in range(2):
         os.system('python3.10 -m pip install Eel requests bs4 gitpython')
 
 from modules.createCircuitMacros import createCircuitMacros as csm
-from modules import autoUpdate
+from modules.autoUpdate import checkUpdate, version
 
 if ".pyz" in __file__:
     projectPath = os.path.dirname(os.path.abspath("CircuitMacropy.pyz"))
@@ -25,7 +25,7 @@ else:
 global pdflatex_path
 
 
-
+checkUpdate(version)
 
 if platform == 'linux':
     m4executable = 'm4'

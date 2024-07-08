@@ -2,7 +2,7 @@ from requests import get
 import shutil, os, pygit2
 version = 0.1
 
-
+print('a')
 def clearDirectory(local_dir):
     for content in os.listdir(local_dir):
         if os.path.isfile(os.path.join(local_dir, content)):
@@ -40,4 +40,3 @@ def checkUpdate(version):
         update()
     else:
         print('CircuitMacropy zaten güncel')
-checkUpdate(version)
