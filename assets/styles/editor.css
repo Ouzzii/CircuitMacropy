@@ -124,3 +124,12 @@ body{
     width: 40px;
     padding: 20px;
 }
+
+
+.ui-corner-all{
+    border-radius: 0 !important;
+}
+
+.ui-widget-header{
+    border: none !important;
+}

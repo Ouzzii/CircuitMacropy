@@ -1,3 +1,5 @@
+
+
 function placeToTreeView(files) {
     $('#openfolder').css('display', 'none')
     $('.treeview').prepend(treeTitle(files[0].path))
@@ -7,8 +9,8 @@ function placeToTreeView(files) {
 
 
     for (let i = 0; i < files.length; i += 1) {
-        console.log(files[i].dir.split("\\").length == '2')
-        console.log(appended.includes(files[i].dir))
+        //console.log(files[i].dir.split("\\").length == '2')
+        //console.log(appended.includes(files[i].dir))
         if (files[i].dir == '') {
             $('.treeview .filesfolders').append(file(files[i]))
         }
@@ -71,8 +73,10 @@ function placeToTreeView(files) {
                 appended.push(files[i].dir)
             }
             if (files[i].file != '') {
-                const dir = files[i].dir.replace('#', 'mcrpy35mcrpy').replace('.', 'mcrpy46mcrpy')
-                const file = files[i].file.replace('#', 'mcrpy35mcrpy').replace('.', 'mcrpy46mcrpy')
+                const dir = files[i].dir
+                const file = files[i].file
+                //const dir = files[i].dir.replace('#', 'mcrpy35mcrpy').replace('.', 'mcrpy46mcrpy')
+                //const file = files[i].file.replace('#', 'mcrpy35mcrpy').replace('.', 'mcrpy46mcrpy')
                 $(`${dir.split('\\').join(' #')}`).append(subFile(file, dir.split('\\').length)) // alt dosyalar
 
             }
@@ -97,14 +101,26 @@ function openFolder() {
     })
 }
 
+
+
+
 function updateFolderAsync(){
+
+    const openeds = $('.dir.opened')// > :first-child')
+
+
     if (!$('#new').length){
         eel.getWorkspaceFolder()(function(workspaceFolder){
             if (workspaceFolder != ''){
                 eel.getfiles(workspaceFolder)(function(files){
+
                     $('.treeViewTitle').remove()
                     $('.filesfolders').empty()
                     placeToTreeView(files)
+                    openeds.each(function(){
+                        console.log("div#"+$(this).attr('id'))
+                        $("div#"+$(this).attr('id')).children(':first').click()
+                    })
                 })
             }
         })
@@ -115,9 +131,9 @@ function updateFolderAsync(){
 
 $('#openfolder button').on('click', function () {
     openFolder()
-    /*var updateFolder = setInterval(function(){
-        updateFolderAsync()
-    }, 1000)*/
+    //var updateFolder = setInterval(function(){
+    //    updateFolderAsync()
+    //}, 1000)
 })
 
 // Create file and folder structures
@@ -133,16 +149,16 @@ function treeTitle(title) {
     `
 }
 function folder(key) {
-    return `<div class='dir closed' id='${key.dir.split('\\')[1]}'><a>~/${key.dir}</a></div>`
+    return `<div class='dir closed' id='${name_to_id(key.dir.split('\\')[1])}'><a>~/${id_to_name(key.dir)}</a></div>`
 }
 function file(key) {
-    return `<div class='file' id='${key.file}'><a>${key.file}</a> <img class='dots' src="https://cdn-icons-png.flaticon.com/512/2311/2311524.png"></div>`
+    return `<div class='file' id='${name_to_id(key.file)}'><a>${id_to_name(key.file)}</a> <img class='dots' src="https://cdn-icons-png.flaticon.com/512/2311/2311524.png"></div>`
 }
 function subFolder(key, layer) {
-    return `<div class='dir closed' style='padding-left:${layer * 10}px' id='${key}'><a>~/${key}</a></div>`
+    return `<div class='dir closed' style='padding-left:${layer * 10}px' id='${name_to_id(key)}'><a>~/${id_to_name(key)}</a></div>`
 }
 function subFile(key, layer) {
-    return `<div class='file' style='padding-left:${layer * 10}px' id='${key}'><a>${key}</a></div>`
+    return `<div class='file' style='padding-left:${layer * 10}px' id='${name_to_id(key)}'><a>${id_to_name(key)}</a></div>`
 }
 
 
@@ -213,11 +229,13 @@ $('body').on('click', '.closeTab', function(){
 
 
 $('body').on('click', '.dir a', function(){
-    console.log($(this).parent())
+    //console.log($(this).parent())
     if ($(this).parent().attr('class').includes('closed')){
         $(this).parent().removeClass('closed')
+        $(this).parent().addClass('opened')
     }else{
         $(this).parent().addClass('closed')
+        $(this).parent().removeClass('opened')
     }
 })
 
@@ -282,7 +300,7 @@ $('body').on('click', '.newfile', function(){
     if ($('.filesfolders #new').length === 0){
         $('.filesfolders').append(`
             <div id="new">
-                <label>New File -></label>
+                <label>New File</label>
                 <input type='text'>
             </div>
         `)
@@ -330,3 +348,17 @@ $('body').on('click', '.dots', function(){
     console.log($(this))
 
 })
+
+
+
+function name_to_id(content){
+    return content
+    .replace('#', 'mcrpy35mcrpy')
+    .replace('.', 'mcrpy46mcrpy')
+}
+
+function id_to_name(content){
+    return content
+    .replace('mcrpy35mcrpy', '#')
+    .replace('mcrpy46mcrpy', '.')
+}
