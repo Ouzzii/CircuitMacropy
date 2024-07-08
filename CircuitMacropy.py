@@ -1,26 +1,41 @@
 # pip install Eel requests bs4
-import eel
-import eel.chrome
-from json import load, dump
-import os
-from modules.createCircuitMacros import createCircuitMacros as csm
-from tkinter import filedialog
-from base64 import b64encode
-from subprocess import Popen, PIPE
-from sys import platform
+for i in range(2):
+    try:
+        import eel
+        import eel.chrome
+        from json import load, dump
+        import os
+        from modules.createCircuitMacros import createCircuitMacros as csm
+        from tkinter import filedialog
+        from base64 import b64encode
+        from subprocess import Popen, PIPE
+        from sys import platform
+        break
+    except ImportError:
+        import os
+        os.system('python3.10 -m pip install Eel requests bs4')
 
 if ".pyz" in __file__:
     projectPath = os.path.dirname(os.path.abspath("CircuitMacropy.pyz"))
 else:
     projectPath = os.path.dirname(os.path.abspath(__file__))
 
+global pdflatex_path
+
+
+
+
 
 if platform == 'linux':
     m4executable = 'm4'
     dpicexecutable = 'dpic'
-else:
+elif platform == 'win32':
     m4executable = 'm4.exe'
     dpicexecutable = 'dpic.exe'
+    stdout, stderr = Popen(f'where pdflatex', shell=True, stdout=PIPE, stderr=PIPE).communicate()
+    pdflatex_path = stdout.decode('utf-8').split('\n')[0]
+
+
 
 with open('info.json', encoding='utf-8')as f:
     infoJson = load(f)
@@ -141,27 +156,29 @@ def saveContent(path, content):
 @eel.expose
 def compile(basecontent, compileas, compileto):
     conf = readConf()
-    print(compileto)
+    print(os.getcwd())
     if compileto == 'latex':
         if compileas == 'pgf':
             os.chdir(conf['CircuitMacrosPath'])
+            print(os.getcwd())
             texfile = basecontent.split('.')[0]+".tex"
             compiledContent = Popen(f"{m4executable} {compileas}.m4 {basecontent} | {dpicexecutable} -g", stdout=PIPE, shell=True).stdout.read()
             with open(texfile, 'wb')as f:
                 f.write(compiledContent)
     elif compileto == 'pdf':
-        print('abcd')
         if basecontent.endswith('.tex'):
-            Popen(f'pdflatex -interaction=nonstopmode {basecontent.replace(chr(92))}', shell=True).communicate()
+            os.chdir(conf['workspaceFolder'])
+            print(f'{pdflatex_path} -interaction=nonstopmode {basecontent}')
+            Popen(f'{pdflatex_path} -interaction=nonstopmode {basecontent}', shell=True).communicate()
         else:
             os.chdir(conf['CircuitMacrosPath'])
             texfile = basecontent.split('.')[0]+".tex"
             compiledContent = Popen(f"{m4executable} {compileas}.m4 {basecontent} | {dpicexecutable} -g", stdout=PIPE, shell=True).stdout.read()
+            print(f"{m4executable} {compileas}.m4 {basecontent} | {dpicexecutable} -g")
             with open(texfile, 'wb')as f:
                 f.write(compiledContent)
             os.chdir(readConf()['workspaceFolder'])
-            print(f'pdflatex -interaction=nonstopmode {texfile.replace(chr(92), "/")}')
-            Popen(f'pdflatex -interaction=nonstopmode {texfile.replace(chr(92), "/")}', shell=True).communicate()
+            Popen(fr'{pdflatex_path} -interaction=nonstopmode {texfile.replace(chr(92), "/")}', shell=True).communicate()
     clearJunkFiles()
     os.chdir(projectPath)
     return {'message': 'compiled'}
@@ -193,6 +210,28 @@ def getColorPalette(key):
     else:
         with open(projectPath+'/colorPalette.json', encoding='utf-8')as f:
             return load(f)[key]
+
+
+
+def detect_pdflatex_version():
+    if platform == 'win32':
+        global pdflatex_path
+        stdout, stderr = Popen(fr'where pdflatex', shell=True, stdout=PIPE, stderr=PIPE).communicate()
+        pdflatex_path = stdout.decode('utf-8').split('\n')[0]
+
+
+    compilers = ['MiKTeX', 'texlive', 'PCTeX', 'BaKoMa TeX']
+
+    conf = readConf()
+    for i in compilers:
+        if i in pdflatex_path:
+            conf['pdflatex_version'] = i
+            writeConf(conf)
+    return conf['pdflatex_version']
+
+
+
+
 
 eel.init('assets')
 #eel.start('/html/main.html', size=(1366,743))
