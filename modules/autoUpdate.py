@@ -54,6 +54,13 @@ def checkUpdate(version):
     exec(updated_version, vars)
     if vars['version'] > version:
         print('CircuitMacropy güncelleniyor...')
+<<<<<<< HEAD
+        return 'update_available'
+    else:
+        print('CircuitMacropy zaten güncel')
+        return 'up_to_date'
+=======
         update()
     else:
         print('CircuitMacropy zaten güncel')
+>>>>>>> ef2ce48a9e9964357e5d02852c85a8b933cc60eb
