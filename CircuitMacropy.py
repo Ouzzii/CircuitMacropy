@@ -158,23 +158,29 @@ def getfiles(Path):
 @eel.expose
 def getcontent(parent, file):
     for root, dirs, files in os.walk(readConf()['workspaceFolder']):
+        print(root)
+        filename = ''
         if root.endswith(parent) and file in files:
             filename = os.path.join(root, file)
+        if parent == "R0000T":
+            filename = os.path.join(root, file)
+        if os.path.exists(filename):
             with open(filename, encoding='utf-8')as f:
                 return {'content': f.read(), 'fullpath': filename}
-        if parent == "R0000T":
-            with open(os.path.join(root, file), encoding='utf-8')as f:
-                return {'content': f.read(), 'fullpath': os.path.join(root, file)}
     return '0'
 
 
 @eel.expose
 def getpdf(path):
-    for root, dirs, files in os.walk(readConf()['workspaceFolder']):
+    for root, dirs, files in os.walk(readConf()['workspaceFolder']):       
         if root.endswith(path.split('\\')[1]) and path.split('\\')[2] in files:
             filename = os.path.join(root, path.split('\\')[2])
         elif path.split('\\')[1] == 'R0000T':
-            filename = os.path.join(root, path.split('\\')[2])
+            filename = os.path.join(root, '\\'.join(path.split('\\')[2:]))
+        print(filename, os.path.exists(filename))
+        if os.path.exists(filename):
+            break
+        #    print(True)
     #return {'fullpath': filename}
     print(filename)
     with open(filename, 'rb')as f:

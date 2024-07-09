@@ -73,7 +73,8 @@ function renderPage(num) {
 //async
 async function preview(path){
   if(path!=''){
-    eel.getpdf(path)(function(content){
+    console.log(id_to_name(path))
+    eel.getpdf(id_to_name(path))(function(content){
       console.log(content)
       var PDFcontent = atob(content)
       pdfjsLib.getDocument({ data: PDFcontent }).promise.then(function (pdf) {

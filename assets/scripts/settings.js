@@ -11,6 +11,8 @@ $('body').on('click', '.apply button', function(){
 $('body').on('click', '#ask_for_update .buttons img', function(){
     if ($(this).attr('id') == 'applyupdate'){
         eel.update_()()
+    }else{
+        $('body div#ask_for_update').remove()
     }
 })
 

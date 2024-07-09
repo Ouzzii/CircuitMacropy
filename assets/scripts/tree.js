@@ -118,7 +118,6 @@ function updateFolderAsync(){
                     $('.filesfolders').empty()
                     placeToTreeView(files)
                     openeds.each(function(){
-                        console.log("div#"+$(this).attr('id'))
                         $("div#"+$(this).attr('id')).children(':first').click()
                     })
                 })
@@ -131,9 +130,9 @@ function updateFolderAsync(){
 
 $('#openfolder button').on('click', function () {
     openFolder()
-    var updateFolder = setInterval(function(){
-        updateFolderAsync()
-    }, 1000)
+    //var updateFolder = setInterval(function(){
+    //    updateFolderAsync()
+    //}, 1000)
 })
 
 // Create file and folder structures
@@ -186,7 +185,8 @@ $('body').on('click', '.file a', function (element) {
     if (parentNode.hasClass('treeview')) {
         getFileContent($(this).parent().attr('id'), 'R0000T', id_)
     } else {
-        getFileContent($(this).parent().attr('id'), parentNode.attr('id'), id_)
+        //getFileContent($(this).parent().attr('id'), parentNode.attr('id'), id_)
+        getFileContent($(this).parent().attr('id'), $(this).parent().parent().attr('id'), id_)
 
     }
     
@@ -244,13 +244,13 @@ $('body').on('click', '.dir a', function(){
 
 
 async function getFileContent(file, parentdir, id) {
-    console.log(file, parent, id)
     if (parentdir!='R0000T'){
     var parent = parentdir
 }else{
     var parent = 'R0000T'
 }
-    const data = eel.getcontent(parent, file)(function(fileContent){
+    console.log(parent, id_to_name(file))
+    const data = eel.getcontent(parent, id_to_name(file))(function(fileContent){
         var content = fileContent.content
         var fullpath = fileContent.fullpath
         if (id[1] != 0){
