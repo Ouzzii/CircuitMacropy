@@ -2,7 +2,7 @@ from requests import get
 import shutil, os
 import zipfile
 import io
-version = 0.0
+version = 0.1
 
 
 def clearDirectory(local_dir):

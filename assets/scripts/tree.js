@@ -130,9 +130,9 @@ function updateFolderAsync(){
 
 $('#openfolder button').on('click', function () {
     openFolder()
-    //var updateFolder = setInterval(function(){
-    //    updateFolderAsync()
-    //}, 1000)
+    var updateFolder = setInterval(function(){
+        updateFolderAsync()
+    }, 1000)
 })
 
 // Create file and folder structures
