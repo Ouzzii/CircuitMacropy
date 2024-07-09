@@ -2,7 +2,7 @@ from requests import get
 import shutil, os
 import zipfile
 import io
-version = 0.1
+version = 0.0
 
 
 def clearDirectory(local_dir):
@@ -41,6 +41,7 @@ def download_and_extract_specific_folder(repo_url, extract_to):
     shutil.rmtree(temp_dir)
 
 def update():
+    print('CircuitMacropy güncelleniyor')
     repo_url = 'https://github.com/Ouzzii/CircuitMacropy.git'
     local_dir = os.getcwd()
     clearDirectory(local_dir)
@@ -53,7 +54,7 @@ def checkUpdate(version):
     updated_version = get('https://raw.githubusercontent.com/Ouzzii/CircuitMacropy/main/modules/autoUpdate.py').text
     exec(updated_version, vars)
     if vars['version'] > version:
-        print('CircuitMacropy güncelleniyor...')
+        print('CircuitMacropy güncellenmeye hazır')
         return 'update_available'
     else:
         print('CircuitMacropy zaten güncel')
