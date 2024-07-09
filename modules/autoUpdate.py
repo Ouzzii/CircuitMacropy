@@ -12,7 +12,7 @@ def clearDirectory(local_dir):
         else:
             shutil.rmtree(os.path.join(local_dir, content))
 
-def download_and_extract_specific_folder(repo_url, extract_to, folder_name):
+def download_and_extract_specific_folder(repo_url, extract_to):
     # Geçici dizin oluştur
     temp_dir = os.path.join(extract_to, 'temp_repo')
     if not os.path.exists(temp_dir):
@@ -54,7 +54,7 @@ def update():
     repo_url = 'https://github.com/Ouzzii/CircuitMacropy.git'
     local_dir = os.getcwd()
     clearDirectory(local_dir)
-    download_and_extract_specific_folder(repo_url, local_dir, 'CircuitMacropy')
+    download_and_extract_specific_folder(repo_url, local_dir)
     #pygit2.clone_repository(repo_url, local_dir)
 
 
