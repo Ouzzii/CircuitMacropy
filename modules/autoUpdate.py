@@ -2,7 +2,8 @@ from requests import get
 import shutil, os
 import zipfile
 import io
-version = 0.0
+version = 0.1
+
 
 def clearDirectory(local_dir):
     for content in os.listdir(local_dir):
@@ -52,7 +53,7 @@ def checkUpdate(version):
     updated_version = get('https://raw.githubusercontent.com/Ouzzii/CircuitMacropy/main/modules/autoUpdate.py').text
     exec(updated_version, vars)
     if vars['version'] > version:
-        return 'update_available'
+        print('CircuitMacropy güncelleniyor...')
+        update()
     else:
         print('CircuitMacropy zaten güncel')
-        return 'up_to_date'
