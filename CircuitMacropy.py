@@ -26,9 +26,9 @@ else:
 
 global pdflatex_path
 
-print('versiyon')
+
 checkUpdate(version)
-print('versiyon biti')
+
 if platform == 'linux':
     m4executable = 'm4'
     dpicexecutable = 'dpic'
