@@ -4,10 +4,15 @@ $('body').on('click', '.settings img:first-child', function(){
 
 $('body').on('click', '.apply button', function(){
     eel.applySettings(
-        $('#junkfileentry').val()
+        $('#junkfileentry').val(),
+        $('#autoupdatecheckbox').is(':checked')
     )
 })
-
+$('body').on('click', '#ask_for_update .buttons img', function(){
+    if ($(this).attr('id') == 'applyupdate'){
+        eel.update_()()
+    }
+})
 
 /*
 $('.textInfo').hover(

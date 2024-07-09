@@ -126,8 +126,18 @@ html, body, *{
 
 
 
+#new img{
+    cursor: pointer;
+    height: 19px;
+    width: 19px;
+}
+#new div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
 
-
+}
 .dots{
     height: 20px;
     width: 20px;

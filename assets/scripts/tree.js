@@ -131,9 +131,9 @@ function updateFolderAsync(){
 
 $('#openfolder button').on('click', function () {
     openFolder()
-    //var updateFolder = setInterval(function(){
-    //    updateFolderAsync()
-    //}, 1000)
+    var updateFolder = setInterval(function(){
+        updateFolderAsync()
+    }, 1000)
 })
 
 // Create file and folder structures
@@ -300,7 +300,10 @@ $('body').on('click', '.newfile', function(){
     if ($('.filesfolders #new').length === 0){
         $('.filesfolders').append(`
             <div id="new">
-                <label>New File</label>
+                <div>
+                    <label>Yeni Dosya</label>
+                    <img src='https://cdn-icons-png.flaticon.com/512/12503/12503635.png'>
+                </div>
                 <input type='text'>
             </div>
         `)
@@ -320,15 +323,22 @@ $(document).on('click', function(event){
     }
 })
 
+
+
+$('body').on('click', 'div#new img', function(){
+    $('#new').remove()
+})
+
+
 $('body').on('keydown', '#new input', function(event) {
                 // 13 is the keycode for the Enter key
                 console.log(event.keyCode)
-                if (event.keyCode === 13 && !$(event.target).closest('#new').length && $('#new input').val() != '' && $('#new input').length) {
+                if (event.keyCode == 13) {
                     // Prevent the default action (if necessary)
                     event.preventDefault();
                     eel.saveFile($('#new input').val())()
                     $('#new').remove()
-                }else if(event.keyCode === 13 && $('#new input').length){
+                } else if (event.keyCode == 27){
                     $('#new').remove()
                 }
             });

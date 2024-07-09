@@ -1,0 +1,25 @@
+#ask_for_update{
+    z-index: 100;
+    position: absolute;
+    height: 25%;
+    width: 25%;
+    background-color: bisque;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons img{
+    height: 35px;
+    width: 35px;
+}

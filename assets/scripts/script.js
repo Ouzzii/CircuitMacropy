@@ -1,5 +1,12 @@
 $(document).ready(function(){
 
+    eel.Is_there_an_update_available()(function(html){
+        if (html != false){
+            $('#ask_for_update').html(html)
+        }
+
+    })
+
     eel.getColorPalette("SunsetHarmony")(function(json){
         console.log(json)
         const newTreeviewBackground = json[0];
@@ -35,9 +42,17 @@ $(document).ready(function(){
 
     })
 
-    eel.getJunkFiles()(function(value){
+
+    eel.filesettings()(function(value){
         console.log(value)
         $('#junkfileentry').val(value)
+    })
+
+    eel.updatesettings()(function(value){
+        console.log(value)
+        if (value){
+            $('#autoupdatecheckbox').click()
+        }
     })
 
 
