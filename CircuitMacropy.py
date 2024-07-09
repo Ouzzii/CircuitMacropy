@@ -1,5 +1,3 @@
-#newfile
-
 # pip install Eel requests bs4
 for i in range(2):
     try:
@@ -14,10 +12,10 @@ for i in range(2):
         break
     except ImportError:
         import os
-        os.system('python3.10 -m pip install Eel requests bs4 gitpython')
+        os.system('py -3.10 -m pip install Eel requests bs4')
 
 from modules.createCircuitMacros import createCircuitMacros as csm
-from modules.autoUpdate import checkUpdate, version
+from modules.autoUpdate import checkUpdate, version, update
 
 if ".pyz" in __file__:
     projectPath = os.path.dirname(os.path.abspath("CircuitMacropy.pyz"))
@@ -25,9 +23,8 @@ else:
     projectPath = os.path.dirname(os.path.abspath(__file__))
 
 global pdflatex_path
+global ask_for_update
 
-
-checkUpdate(version)
 
 if platform == 'linux':
     m4executable = 'm4'
@@ -57,8 +54,26 @@ def readConf():
     else:
         with open(projectPath+'/configurations.json', encoding='utf-8')as f:
             return load(f)
-    
 
+
+conf = readConf()
+checked = checkUpdate(version)
+if 'autoupdate' in list(conf.keys()):
+    ask_for_update = False
+    otoupdate = conf['autoupdate']
+    if otoupdate and checked == 'update_available':
+        update()
+    elif not otoupdate and checked == 'update_available':
+        ask_for_update = True
+
+else:
+    ask_for_update = False
+    otoupdate = True
+    conf['autoupdate'] = True
+    writeConf(conf)
+    if checked == 'update_available':
+        update()
+    
 def clearJunkFiles():
     conf = readConf()
     junkext = conf['junkfiles'].split(',')
@@ -77,19 +92,35 @@ def getinfo(infoname):
     return infoJson[infoname]
 
 @eel.expose
-def getJunkFiles():
+def filesettings():
     conf = readConf()
     if 'junkfiles' in list(conf.keys()):
         return conf['junkfiles']
     else:
         return ''
-
 @eel.expose
-def applySettings(junkfiles):
+def updatesettings(): 
+    conf = readConf()
+    if 'autoupdate' in list(conf.keys()):
+        return conf['autoupdate']
+    else:
+        conf['autoupdate'] = False
+        writeConf(conf)
+        return False
     
+    
+@eel.expose
+def applySettings(junkfiles, autoupdate):
+    # Junkfiles
     conf = readConf()
     conf['junkfiles'] = junkfiles
+    
+    #autoupdate
+    conf['autoupdate'] = autoupdate
+    
     writeConf(conf)
+    
+    
 @eel.expose
 def getSettings():
     with open('assets/html/settings.html', encoding='utf-8') as f:
@@ -195,6 +226,8 @@ def getWorkspaceFolder():
 @eel.expose
 def saveFile(filename):
     conf = readConf()
+    print('save file çalıştı')
+    print(os.path.join(conf['workspaceFolder'], filename))
     with open(os.path.join(conf['workspaceFolder'], filename), 'w')as f:
         f.write('')
     return {'message': 'file created'}
@@ -214,7 +247,17 @@ def getColorPalette(key):
         with open(projectPath+'/colorPalette.json', encoding='utf-8')as f:
             return load(f)[key]
 
+@eel.expose
+def Is_there_an_update_available():
+    if ask_for_update:
+        with open('assets/html/ask_for_update.html', encoding='utf-8')as f:
+            return f.read()
+    else:
+        return False
 
+@eel.expose
+def update_():
+    update()
 
 def detect_pdflatex_version():
     if platform == 'win32':

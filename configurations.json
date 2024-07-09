@@ -6,5 +6,6 @@
   "m4engine": "m4.exe",
   "m4flag": "pgf.m4",
   "dpicflag": "-g",
-  "pdflatex_version": "MiKTeX"
+  "pdflatex_version": "MiKTeX",
+  "autoupdate": false
 }
