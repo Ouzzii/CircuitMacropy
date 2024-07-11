@@ -24,7 +24,7 @@ else:
 
 global pdflatex_path
 global ask_for_update
-
+global checked
 
 if platform == 'linux':
     m4executable = 'm4'
@@ -58,22 +58,25 @@ def readConf():
 
 conf = readConf()
 checked = checkUpdate(version)
-if 'autoupdate' in list(conf.keys()):
-    ask_for_update = False
-    otoupdate = conf['autoupdate']
-    if otoupdate and checked == 'update_available':
-        update()
-    elif not otoupdate and checked == 'update_available':
-        ask_for_update = True
+if checked == "no_connection":
+    if 'autoupdate' in list(conf.keys()):
+        ask_for_update = False
+        otoupdate = conf['autoupdate']
+        if otoupdate and checked == 'update_available':
+            update()
+        elif not otoupdate and checked == 'update_available':
+            ask_for_update = True
 
+    else:
+        ask_for_update = False
+        otoupdate = True
+        conf['autoupdate'] = True
+        writeConf(conf)
+        if checked == 'update_available':
+            update()
 else:
     ask_for_update = False
-    otoupdate = True
-    conf['autoupdate'] = True
-    writeConf(conf)
-    if checked == 'update_available':
-        update()
-    
+
 def clearJunkFiles():
     conf = readConf()
     junkext = conf['junkfiles'].split(',')
@@ -257,9 +260,16 @@ def getColorPalette(key):
 def Is_there_an_update_available():
     if ask_for_update:
         with open('assets/html/ask_for_update.html', encoding='utf-8')as f:
-            return f.read()
+            return {'message': 'update available',
+                    'html_content': f.read()}
+    elif ask_for_update == False and checked == "no_connection":
+        with open('assets/html/no_connection.html', encoding='utf-8')as f:
+            return {'message': 'no internet connection',
+                    'html_content': f.read()}
     else:
-        return False
+        return {'message': 'already up to date',
+                'html_content': ''}
+
 
 @eel.expose
 def update_():
