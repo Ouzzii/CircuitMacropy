@@ -1,8 +1,18 @@
 $(document).ready(function(){
 
     eel.Is_there_an_update_available()(function(html){
-        if (html != false){
-            $('#ask_for_update').html(html)
+        console.log(html.message)
+        if (html.message == 'update available'){
+            $('#ask_for_update').html(html.html_content)
+            $('#ask_for_update').css('display', 'block')
+        }else if (html.message == 'already up to date'){
+            
+        }else if (html.message == 'no internet connection') {
+            
+            $('#no-internet-connection').html(html.html_content)
+            $(".no-connection-alert").fadeOut(7500, function() {
+                $(this).remove();
+            });
         }
 
     })

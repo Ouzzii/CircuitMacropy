@@ -171,6 +171,23 @@ $(document).ready(function() {
 
 
 $('body').on('click', '.file a', function (element) {
+
+    var baseText = $(this).text().trim()
+    
+    var found = false
+    $('.editor ul a').each(function(){
+
+        if ($(this).text().trim() === baseText) {
+            found = true;
+            return false; // Döngüyü sonlandır
+        }
+    })
+    console.log(found)
+    if (found == true){
+        return 0
+    }
+
+
     var parentNode = $(this).parent().parent().parent()
     if (!$(this).html().includes('.pdf')){
         if ($(`.editor ul a`).length != 0){
