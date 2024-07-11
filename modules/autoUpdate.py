@@ -3,7 +3,7 @@ import shutil, os
 import zipfile
 import io
 from .checkConnection import internet_connection
-version = 0.2
+version = 0.21
 
 
 def clearDirectory(local_dir):
@@ -24,7 +24,7 @@ def download_and_extract_specific_folder(repo_url, extract_to):
     
     response = get(zip_url)
     response.raise_for_status()
-
+    clearDirectory(extract_to)
     with zipfile.ZipFile(io.BytesIO(response.content)) as zip_file:
         zip_file.extractall(temp_dir)
     
@@ -45,7 +45,7 @@ def update():
     print('CircuitMacropy güncelleniyor')
     repo_url = 'https://github.com/Ouzzii/CircuitMacropy.git'
     local_dir = os.getcwd()
-    clearDirectory(local_dir)
+    #clearDirectory(local_dir)
     download_and_extract_specific_folder(repo_url, local_dir)
 
 
