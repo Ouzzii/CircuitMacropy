@@ -3,7 +3,8 @@ import shutil, os
 import zipfile
 import io
 from .checkConnection import internet_connection
-version = 0.21
+from .__version__ import version
+
 
 
 def clearDirectory(local_dir):
@@ -52,10 +53,9 @@ def update():
 def checkUpdate(version):
     if internet_connection():
         print("versiyon kontrolü yapılıyor")
-        vars = {}
-        updated_version = get('https://raw.githubusercontent.com/Ouzzii/CircuitMacropy/main/modules/autoUpdate.py').text
-        exec(updated_version, vars)
-        if vars['version'] > version:
+        updated_version = get('https://raw.githubusercontent.com/Ouzzii/CircuitMacropy/main/modules/__version__.py').text.split(' ')[-1].strip()
+        server_version = float(updated_version)
+        if server_version > version:
             print('CircuitMacropy güncellenmeye hazır')
             return 'update_available'
         else:
