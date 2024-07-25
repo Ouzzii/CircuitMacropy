@@ -1,2 +1,2 @@
-py -3.10 CircuitMacropy.py
+py -3.10 -B CircuitMacropy.py
 pause
