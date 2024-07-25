@@ -10,7 +10,7 @@ for i in range(2):
         from subprocess import Popen, PIPE
         from sys import platform
         break
-    except ImportError:
+    except ModuleNotFoundError:
         import os
         os.system('py -3.10 -m pip install Eel requests bs4')
 
