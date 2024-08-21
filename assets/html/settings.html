@@ -1,7 +1,26 @@
+<style>
+    select {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    select:disabled {
+        cursor: not-allowed;
+    }
+
+    option:disabled {
+        color: gray;
+    }
+</style>
+
+
 <div class="settingTabs">
     <ul>
         <li><a href="#tabs-1">Dosya Ayarları</a></li>
         <li><a href="#tabs-2">Güncellemeler</a></li>
+        <li><a href="#tabs-3">LaTeX Ayarlari</a></li>
     </ul>
     <div id="tabs-1">
         <h3>Önemsiz Dosyalar</h3>
@@ -31,6 +50,19 @@
         </div>
 
 
+    </div>
+    <div id="tabs-3">
+        <h3>Tespit Edilen Tex Dagitimlari</h3>
+        <ul class="tex-distros" style="list-style-type:disc;">
+            <li style="color: rgb(231, 95, 95);font-weight: bold;">Herhangi bir tex dagitimi bulunamadi</li>
+        </ul>
+        <h3>Secilebilir Pdflatex Dosya Yolu</h3>
+        <div class="pdflatex-path">
+            <select disabled>
+                <option select>Herhangi bir pdflatex versiyonu bulunamadi</option>
+            </select>
+
+        </div>
     </div>
     <div class="apply">
         <button>Uygula</button>
