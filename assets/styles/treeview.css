@@ -142,3 +142,10 @@ html, body, *{
     height: 20px;
     width: 20px;
 }
+
+.notsaved::after{
+    content: "\2022"; /* Unicode karakteri için kullanılır, bu örnekte bir nokta (•) */
+    font-size: 20px;  /* İkonun boyutunu ayarlar */
+    color: red;       /* İkonun rengini ayarlar */
+    margin-left: 10px;
+}
