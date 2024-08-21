@@ -1,28 +1,49 @@
 # pip install Eel requests bs4
-for i in range(2):
+import os
+# List of required packages
+required_packages = ['eel', 'requests', 'bs4']
+
+# Function to install missing packages
+def install_packages(packages):
+    os.system('py -3.10 -m pip install ' + ' '.join(packages))
+
+# Check for missing packages
+missing_packages = []
+for package in required_packages:
     try:
-        import eel
-        import eel.chrome
-        from json import load, dump
-        import os
-        from tkinter import filedialog
-        from base64 import b64encode
-        from subprocess import Popen, PIPE
-        from sys import platform
-        break
+        __import__(package)
     except ModuleNotFoundError:
-        import os
-        os.system('py -3.10 -m pip install Eel requests bs4')
+        missing_packages.append(package)
+
+# Install missing packages if any
+if missing_packages:
+    install_packages(missing_packages)
+
+# Import modules after ensuring all are installed
+import eel
+import eel.chrome
+from json import load, dump
+from tkinter import filedialog
+from base64 import b64encode
+from subprocess import Popen, PIPE
+import subprocess
+from sys import platform
 
 from modules.createCircuitMacros import createCircuitMacros as csm
 from modules.autoUpdate import checkUpdate, version, update
+from modules.detect_tex_distros import detect_tex_distros, detect_boxdims_is_installed
+from modules.configuration_utils import readConf, writeConf
+#from modules import detect_tex_distros
 
 if ".pyz" in __file__:
     projectPath = os.path.dirname(os.path.abspath("CircuitMacropy.pyz"))
 else:
     projectPath = os.path.dirname(os.path.abspath(__file__))
 
-global pdflatex_path
+
+
+
+
 global ask_for_update
 global checked
 
@@ -32,50 +53,18 @@ if platform == 'linux':
 elif platform == 'win32':
     m4executable = 'm4.exe'
     dpicexecutable = 'dpic.exe'
-    stdout, stderr = Popen(f'where pdflatex', shell=True, stdout=PIPE, stderr=PIPE).communicate()
-    pdflatex_path = stdout.decode('utf-8').split('\n')[0]
+
+
+if platform == 'win32':
+    with open(projectPath + '\\info.json', encoding='utf-8')as f:
+        infoJson = load(f)
+elif platform == 'linux':
+    with open(projectPath + '/info.json', encoding='utf-8')as f:
+        infoJson = load(f)
 
 
 
-with open('info.json', encoding='utf-8')as f:
-    infoJson = load(f)
 
-def writeConf(data):
-    if platform != 'linux':
-        with open(projectPath+'\\configurations.json', 'w', encoding='utf-8')as f:
-            dump(data, f, indent=2, ensure_ascii=False)
-    else:
-        with open(projectPath+'/configurations.json', 'w', encoding='utf-8')as f:
-            dump(data, f, indent=2, ensure_ascii=False)
-def readConf():
-    if platform != 'linux':
-        with open(projectPath+'\\configurations.json', encoding='utf-8')as f:
-            return load(f)
-    else:
-        with open(projectPath+'/configurations.json', encoding='utf-8')as f:
-            return load(f)
-
-
-conf = readConf()
-checked = checkUpdate(version)
-if checked == "no_connection":
-    if 'autoupdate' in list(conf.keys()):
-        ask_for_update = False
-        otoupdate = conf['autoupdate']
-        if otoupdate and checked == 'update_available':
-            update()
-        elif not otoupdate and checked == 'update_available':
-            ask_for_update = True
-
-    else:
-        ask_for_update = False
-        otoupdate = True
-        conf['autoupdate'] = True
-        writeConf(conf)
-        if checked == 'update_available':
-            update()
-else:
-    ask_for_update = False
 
 def clearJunkFiles():
     conf = readConf()
@@ -102,6 +91,23 @@ def filesettings():
     else:
         return ''
 @eel.expose
+def getLaTeXSettings():
+    conf = readConf()
+    availableTexDistros = list(conf['pdflatex-paths'].keys())
+    selectedPdflatexPath = conf["last-distro"]
+    seletcedTexDistro = next((key for key, value in conf["pdflatex-paths"].items() if value == conf["last-distro"]), None)
+    availablePdflatexPaths = list(conf['pdflatex-paths'].values())
+    
+    return {
+        'message': 'success',
+        'availableTexDistros': availableTexDistros,
+        'selectedPdflatexPath': selectedPdflatexPath,
+        'selectedTexDistro': seletcedTexDistro,
+        'availablePdflatexPaths': availablePdflatexPaths
+    }
+    
+    
+@eel.expose
 def updatesettings(): 
     conf = readConf()
     if 'autoupdate' in list(conf.keys()):
@@ -113,7 +119,7 @@ def updatesettings():
     
     
 @eel.expose
-def applySettings(junkfiles, autoupdate):
+def applySettings(junkfiles, autoupdate, selectedPdflatexPath):
     # Junkfiles
     conf = readConf()
     conf['junkfiles'] = junkfiles
@@ -121,6 +127,7 @@ def applySettings(junkfiles, autoupdate):
     #autoupdate
     conf['autoupdate'] = autoupdate
     
+    conf['last-distro'] = selectedPdflatexPath
     writeConf(conf)
     
     
@@ -161,7 +168,6 @@ def getfiles(Path):
 @eel.expose
 def getcontent(parent, file):
     for root, dirs, files in os.walk(readConf()['workspaceFolder']):
-        print(root)
         filename = ''
         if root.endswith(parent) and file in files:
             filename = os.path.join(root, file)
@@ -180,12 +186,9 @@ def getpdf(path):
             filename = os.path.join(root, path.split('\\')[2])
         elif path.split('\\')[1] == 'R0000T':
             filename = os.path.join(root, '\\'.join(path.split('\\')[2:]))
-        print(filename, os.path.exists(filename))
         if os.path.exists(filename):
             break
-        #    print(True)
     #return {'fullpath': filename}
-    print(filename)
     with open(filename, 'rb')as f:
         return b64encode(f.read()).decode('utf-8')
 
@@ -195,48 +198,55 @@ def getpdf(path):
 def saveContent(path, content):
     with open(path, 'w', encoding='utf-8')as f:
         f.write(content)
+    return {'message': 'success'}
 
 @eel.expose
 def compile(basecontent, compileas, compileto):
     conf = readConf()
-    print(os.getcwd())
+    
+    basecontent = os.path.join(basecontent)
     if compileto == 'latex':
         if compileas == 'pgf':
             os.chdir(conf['CircuitMacrosPath'])
-            print(os.getcwd())
             texfile = basecontent.split('.')[0]+".tex"
-            compiledContent = Popen(f"{m4executable} {compileas}.m4 {basecontent} | {dpicexecutable} -g", stdout=PIPE, shell=True).stdout.read()
-            with open(texfile, 'wb')as f:
-                f.write(compiledContent)
+            m4_stdout, m4_stderr = Popen(f"{m4executable} {compileas}.m4 {basecontent} | {dpicexecutable} -g", shell=True, stdout=PIPE, stderr = PIPE).communicate()
+            m4_stdout = m4_stdout.decode('utf-8')
+            with open(texfile, 'w')as f:
+                f.write(m4_stdout)
     elif compileto == 'pdf':
         if basecontent.endswith('.tex'):
             os.chdir(conf['workspaceFolder'])
-            print(f'{pdflatex_path} -interaction=nonstopmode {basecontent}')
-            Popen(f'{pdflatex_path} -interaction=nonstopmode {basecontent}', shell=True).communicate()
+            pdflatex_stdout, pdflatex_stderr = Popen(f'{conf["last-distro"]} -interaction=nonstopmode {basecontent}', shell=True).communicate()
+            pdflatex_stdout = pdflatex_stdout.decode('utf-8')
         else:
             os.chdir(conf['CircuitMacrosPath'])
-            texfile = basecontent.split('.')[0]+".tex"
-            compiledContent = Popen(f"{m4executable} {compileas}.m4 {basecontent} | {dpicexecutable} -g", stdout=PIPE, shell=True).stdout.read()
-            print(f"{m4executable} {compileas}.m4 {basecontent} | {dpicexecutable} -g")
-            with open(texfile, 'wb')as f:
-                f.write(compiledContent)
+            texfile = os.path.splitext(basecontent)[0]+".tex"
+            m4_stdout, m4_stderr = Popen(f"{m4executable} {compileas}.m4 {basecontent} | {dpicexecutable} -g", shell=True, stdout = PIPE, stderr = PIPE).communicate()
+            m4_stdout  = m4_stdout.decode('utf-8')
+            with open(texfile, 'w')as f:
+                f.write(m4_stdout)
             os.chdir(readConf()['workspaceFolder'])
-            Popen(fr'{pdflatex_path} -interaction=nonstopmode {texfile.replace(chr(92), "/")}', shell=True).communicate()
+            pdflatex_stdout, pdflatex_stderr = Popen(rf'{conf["last-distro"]} -interaction=nonstopmode {texfile.replace(chr(92), "/")}', shell=True, stdout = PIPE, stderr = PIPE).communicate()
+            pdflatex_stdout = pdflatex_stdout.decode('utf-8')
     clearJunkFiles()
     os.chdir(projectPath)
-    return {'message': 'compiled'}
+    
+    
+    if compileto == 'pdf' and 'Output written on' in pdflatex_stdout:
+        return {'message': 'compile successful',
+                'notification': 'Dosya basariyla derlendi'}
+    if compileto == 'pdf' and not 'Output written on' in pdflatex_stdout:
+        return {'message': 'compile not successful',
+                'notification': 'Dosya derlenirken bir hata meydana geldi, hata ayrintisi icin hata kayitlarina bakabilirsiniz'}
 
 @eel.expose
 def getWorkspaceFolder():
     conf = readConf()
     return conf['workspaceFolder']
 
-
 @eel.expose
 def saveFile(filename):
     conf = readConf()
-    print('save file çalıştı')
-    print(os.path.join(conf['workspaceFolder'], filename))
     with open(os.path.join(conf['workspaceFolder'], filename), 'w')as f:
         f.write('')
     return {'message': 'file created'}
@@ -276,26 +286,79 @@ def update_():
     update()
 
 def detect_pdflatex_version():
+    global pdflatex_path
     if platform == 'win32':
-        global pdflatex_path
         stdout, stderr = Popen(fr'where pdflatex', shell=True, stdout=PIPE, stderr=PIPE).communicate()
         pdflatex_path = stdout.decode('utf-8').split('\n')[0]
+    elif platform == 'linux':
+        stdout, stderr = Popen(fr'which pdflatex', shell=True, stdout=PIPE, stderr=PIPE).communicate()
+        pdflatex_path = stdout.decode('utf-8').split('\n')[0]
+        
+        
+    if platform == 'win32':
+        compilers = ['MiKTeX', 'texlive', 'PCTeX', 'BaKoMa TeX']
+
+        conf = readConf()
+        for i in compilers:
+            if i in pdflatex_path:
+                conf['pdflatex_version'] = i
+                writeConf(conf)
+        return conf['pdflatex_version']
+    elif platform == 'linux':
+        compilers = ['MiKTeX', 'texlive', 'PCTeX', 'BaKoMa TeX']
+
+        conf = readConf()
+        for i in compilers:
+            if i in pdflatex_path:
+                conf['pdflatex_version'] = i
+                writeConf(conf)
+        return conf['pdflatex_version']
 
 
-    compilers = ['MiKTeX', 'texlive', 'PCTeX', 'BaKoMa TeX']
 
+def initialization():
+    pass
+
+@eel.expose
+def select_distro(distro):
     conf = readConf()
-    for i in compilers:
-        if i in pdflatex_path:
-            conf['pdflatex_version'] = i
+    conf['last-distro'] = conf['pdflatex-paths'][distro]
+    writeConf(conf)
+@eel.expose
+def check_selected_distro():
+    conf = readConf()
+    if not 'last-distro' in list(conf.keys()):
+        return False
+    elif conf['last-distro']:
+        return True
+
+if __name__ == '__main__':    
+    conf = readConf()
+    checked = checkUpdate(version)
+    if checked == "no_connection":
+        if 'autoupdate' in list(conf.keys()):
+            ask_for_update = False
+            otoupdate = conf['autoupdate']
+            if otoupdate and checked == 'update_available':
+                update()
+            elif not otoupdate and checked == 'update_available':
+                ask_for_update = True
+
+        else:
+            ask_for_update = False
+            otoupdate = True
+            conf['autoupdate'] = True
             writeConf(conf)
-    return conf['pdflatex_version']
+            if checked == 'update_available':
+                update()
+    else:
+        ask_for_update = False
 
-
-
-
-
-eel.init('assets')
-#eel.start('/html/main.html', size=(1366,743))
-eel.start('/html/main.html', size=(960,520))
-#eel.start('/html/main.html', size=(1920,1080))
+    #detect_pdflatex_version()
+    #detect_tex_distros()
+    
+    
+    eel.init('assets')
+    #eel.start('/html/main.html', size=(1366,743))
+    eel.start('/html/main.html', size=(960,520))
+    #eel.start('/html/main.html', size=(1920,1080))
