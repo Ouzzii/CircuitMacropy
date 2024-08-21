@@ -1,0 +1,82 @@
+.notification {
+    position: fixed;
+    right: 10px;
+    width: 300px; /* Adjust width as needed */
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px; /* Gap between notifications */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+    z-index: 9999; /* Ensure notifications are on top */
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+.notification.hide {
+    opacity: 0;
+    transform: translateY(0);
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.close-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    color: #e74c3c; /* İkonun rengi: kırmızı ton */
+    font-size: 14px; /* Daha küçük ve estetik bir boyut */
+    background-color: transparent; /* Beyaz bir arka plan */
+    border-radius: 20%; /* Yuvarlak köşeler */
+    border-width: 0px;
+    width: 24px; /* İkon kutusunun genişliği */
+    height: 24px; /* İkon kutusunun yüksekliği */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.close-icon:hover {
+    background-color: #e74c3c; /* Hover durumunda ikonun arka planı kırmızıya döner */
+    color: #ffffff; /* Hover durumunda ikonun rengi beyaza döner */
+}
+
+.pinned {
+    background-color: #27ae60; /* Pinlenmiş bildirimler için sakin bir yeşil ton */
+    border-left-color: #16a085; /* Sol kenarda türü belirleyen bir şerit */
+}
+
+.info {
+    background-color: #3498db; /* Bilgi bildirimi için pastel bir mavi ton */
+    border-left-color: #2980b9; /* Sol kenarda türü belirleyen bir şerit */
+}
+
+.success {
+    background-color: #2ecc71; /* Başarı bildirimi için pastel bir yeşil ton */
+    border-left-color: #27ae60; /* Sol kenarda türü belirleyen bir şerit */
+}
+
+.warning {
+    background-color: #f1c40f; /* Uyarı bildirimi için pastel bir sarı ton */
+    border-left-color: #f39c12; /* Sol kenarda türü belirleyen bir şerit */
+}
+.error {
+    background-color: #f10f0f; /* Uyarı bildirimi için pastel bir sarı ton */
+    border-left-color: #ee2d2d; /* Sol kenarda türü belirleyen bir şerit */
+}
+
+.notification p {
+    margin: 0;
+    line-height: 1.5;
+    color: #ecf0f1; /* Metin rengi */
+}
