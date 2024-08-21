@@ -28,7 +28,7 @@
     background-color: #007fff !important;
 }
 
-.settingTabs ul{
+.settingTabs ul[role="tablist"]{
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
