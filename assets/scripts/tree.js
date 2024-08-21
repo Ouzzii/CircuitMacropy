@@ -130,9 +130,9 @@ function updateFolderAsync(){
 
 $('#openfolder button').on('click', function () {
     openFolder()
-    var updateFolder = setInterval(function(){
-        updateFolderAsync()
-    }, 1000)
+    //var updateFolder = setInterval(function(){
+    //    updateFolderAsync()
+    //}, 1000)
 })
 
 // Create file and folder structures
@@ -148,8 +148,13 @@ function treeTitle(title) {
     `
 }
 function folder(key) {
-    return `<div class='dir closed' id='${name_to_id(key.dir.split('\\')[1])}'><a>~/${id_to_name(key.dir)}</a></div>`
-}
+    if (navigator.appVersion.indexOf('Linux') != -1){
+        return `<div class='dir closed' id='${name_to_id(key.dir.split('/')[1])}'><a>~/${id_to_name(key.dir)}</a></div>`
+
+    }else if (navigator.appVersion.indexOf('Win') != -1){
+        return `<div class='dir closed' id='${name_to_id(key.dir.split('\\')[1])}'><a>~/${id_to_name(key.dir)}</a></div>`
+    }
+    }
 function file(key) {
     return `<div class='file' id='${name_to_id(key.file)}'><a>${id_to_name(key.file)}</a> <img class='dots' src="https://cdn-icons-png.flaticon.com/512/2311/2311524.png"></div>`
 }
@@ -182,7 +187,6 @@ $('body').on('click', '.file a', function (element) {
             return false; // Döngüyü sonlandır
         }
     })
-    console.log(found)
     if (found == true){
         return 0
     }
@@ -266,7 +270,7 @@ async function getFileContent(file, parentdir, id) {
 }else{
     var parent = 'R0000T'
 }
-    console.log(parent, id_to_name(file))
+
     const data = eel.getcontent(parent, id_to_name(file))(function(fileContent){
         var content = fileContent.content
         var fullpath = fileContent.fullpath
@@ -389,3 +393,6 @@ function id_to_name(content){
     .replace('mcrpy35mcrpy', '#')
     .replace('mcrpy46mcrpy', '.')
 }
+
+window.name_to_id = name_to_id
+window.id_to_name = id_to_name
