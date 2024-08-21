@@ -1,11 +1,10 @@
 {
-  "CircuitMacrosPath": "C:\\Users\\ozank\\CMEditor\\Circuit_macros10_5_6",
-  "workspaceFolder": "F:/m4",
+  "CircuitMacrosPath": "",
+  "workspaceFolder": "",
   "junkfiles": ".aux,.gz,.log",
   "dpicengine": "dpic.exe",
   "m4engine": "m4.exe",
   "m4flag": "pgf.m4",
   "dpicflag": "-g",
-  "pdflatex_version": "MiKTeX",
   "autoupdate": false
 }
