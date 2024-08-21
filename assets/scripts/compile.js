@@ -22,13 +22,26 @@ $('body').on('click', '#compile', function(){
         let withcompile = $(this).parent().parent().find('#withcompile').val()
         let contentPath = $(this).parent().parent().parent().find('textarea').attr('path')
         //let contentExt = contentPath.split('.')[1]
-        let content = $(this).parent().parent().parent().find('textarea').text()
+        let content = $(this).parent().parent().parent().find('textarea').val()
         
         
-        eel.saveContent(contentPath, content)()
-        eel.compile(contentPath, withcompile, compileas)(function(){
+
+        eel.saveContent(`${contentPath}`, content)()
+
+        if ($('.editor div textarea').length == 1){
+            textarea = $('.editor div textarea')
+            
+        }else{
+            textarea = $('.editor div[aria-hidden="false"] textarea')
+        }
+        $(`#${name_to_id(textarea.attr('path').split('\\').pop().split('/').pop())} a`).removeClass('notsaved')
+
+        eel.compile(`${contentPath}`, withcompile, compileas)(function(result){
                 waitingimg.css('visibility', 'hidden')
                 openFolder()
+                if (result.message != 'compile successful'){
+                    notification('Derleme yapilirken bir hata meydana geldi')
+                }
             
         })
     })
