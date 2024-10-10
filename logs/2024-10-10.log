@@ -357,3 +357,6 @@
 2024-10-10 14:40:03,847 - geventwebsocket.handler - DEBUG - Validating WebSocket request
 2024-10-10 14:40:03,848 - geventwebsocket.handler - DEBUG - Attempting to upgrade connection
 2024-10-10 14:40:03,848 - geventwebsocket.handler - DEBUG - WebSocket request accepted, switching protocols
+2024-10-10 21:03:12,856 - geventwebsocket.handler - DEBUG - Closed WebSocket
+2024-10-10 21:03:12,895 - geventwebsocket.handler - DEBUG - Failed to write closing frame -> closing socket
+2024-10-10 21:03:12,897 - geventwebsocket.handler - DEBUG - Closed WebSocket
