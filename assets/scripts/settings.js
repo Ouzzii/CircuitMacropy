@@ -63,7 +63,7 @@ eel.updatesettings()(function (value) {
     }
 }) *
 
-    $('body').on('click', '.settings img:first-child', function () {
+    $('body').on('click', '.settings img#settingsIcon', function () {
         $('#settings').toggleClass('hidden')
     })
 

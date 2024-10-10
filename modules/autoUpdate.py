@@ -47,8 +47,8 @@ def update():
     repo_url = 'https://github.com/Ouzzii/CircuitMacropy.git'
     local_dir = os.getcwd()
     #clearDirectory(local_dir)
-    download_and_extract_specific_folder(repo_url, local_dir)
-
+    #download_and_extract_specific_folder(repo_url, local_dir)
+    os.system('git pull')
 
 def checkUpdate(version):
     if internet_connection():

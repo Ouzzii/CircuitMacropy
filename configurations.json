@@ -1,10 +1,15 @@
 {
-  "CircuitMacrosPath": "",
-  "workspaceFolder": "",
+  "CircuitMacrosPath": "C:\\Users\\ozank\\CMEditor\\Circuit_macros10_5_6",
+  "workspaceFolder": "C:/Users/ozank/Desktop/m4",
   "junkfiles": ".aux,.gz,.log",
   "dpicengine": "dpic.exe",
   "m4engine": "m4.exe",
   "m4flag": "pgf.m4",
   "dpicflag": "-g",
-  "autoupdate": false
+  "autoupdate": false,
+  "pdflatex-paths": {
+    "miktex": "C:\\Users\\ozank\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe",
+    "texlive": "C:\\texlive\\2024\\bin\\windows\\pdflatex.exe"
+  },
+  "last-distro": "C:\\Users\\ozank\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe"
 }

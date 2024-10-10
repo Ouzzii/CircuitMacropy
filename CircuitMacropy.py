@@ -231,6 +231,7 @@ def compile(basecontent, compileas, compileto):
     clearJunkFiles()
     os.chdir(projectPath)
     
+    print(m4_stdout)
     
     if compileto == 'pdf' and 'Output written on' in pdflatex_stdout:
         return {'message': 'compile successful',
