@@ -35,6 +35,11 @@ from modules.detect_tex_distros import detect_tex_distros, detect_boxdims_is_ins
 from modules.configuration_utils import readConf, writeConf
 #from modules import detect_tex_distros
 
+import socket, logging
+from modules.configuration_utils import setup_logging
+setup_logging()
+logger = logging.getLogger(__name__)
+
 if ".pyz" in __file__:
     projectPath = os.path.dirname(os.path.abspath("CircuitMacropy.pyz"))
 else:
@@ -46,6 +51,9 @@ else:
 
 global ask_for_update
 global checked
+
+
+ask_for_update = True
 
 if platform == 'linux':
     m4executable = 'm4'
@@ -94,7 +102,10 @@ def filesettings():
 def getLaTeXSettings():
     conf = readConf()
     availableTexDistros = list(conf['pdflatex-paths'].keys())
-    selectedPdflatexPath = conf["last-distro"]
+    if 'last-distro' in list(conf.keys()):
+        selectedPdflatexPath = conf["last-distro"]
+    else:
+        selectedPdflatexPath = None
     seletcedTexDistro = next((key for key, value in conf["pdflatex-paths"].items() if value == conf["last-distro"]), None)
     availablePdflatexPaths = list(conf['pdflatex-paths'].values())
     
@@ -203,7 +214,7 @@ def saveContent(path, content):
 @eel.expose
 def compile(basecontent, compileas, compileto):
     conf = readConf()
-    
+    logger.debug(f'{basecontent}: compiling from {compileas} to {compileto}')
     basecontent = os.path.join(basecontent)
     if compileto == 'latex':
         if compileas == 'pgf':
@@ -336,7 +347,7 @@ def check_selected_distro():
 if __name__ == '__main__':    
     conf = readConf()
     checked = checkUpdate(version)
-    if checked == "no_connection":
+    if checked != "no_connection":
         if 'autoupdate' in list(conf.keys()):
             ask_for_update = False
             otoupdate = conf['autoupdate']
