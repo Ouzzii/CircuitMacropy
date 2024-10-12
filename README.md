@@ -103,7 +103,3 @@ Buradaki bağlantı genel M4 yapısına aşina olabilmeniz için gereken kaynakl
 
 - Programın yapısı gereği çalışılacak dosyalar harici bir depolama aygıtında bulunmamalıdır. Mutlaka bilgisayarınızın ana diski içerisinde yer almalıdır.
 - İlk kullanım sırasında programın internete bağlı olması gerekmektedir. İlk çalıştırma sırasında gerekli bağımlılıklar yüklenir
-
--
-
-
