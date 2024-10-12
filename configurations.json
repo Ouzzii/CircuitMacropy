@@ -1,6 +1,6 @@
 {
-  "CircuitMacrosPath": "/home/ozank/CMEditor/Circuit_macros10_5_5",
-  "workspaceFolder": "/home/ozank/CMEditor/Circuit_macros10_5_5",
+  "CircuitMacrosPath": "",
+  "workspaceFolder": "",
   "junkfiles": ".aux,.gz,.log",
   "dpicengine": "dpic",
   "m4engine": "m4",
@@ -8,8 +8,6 @@
   "dpicflag": "-g",
   "autoupdate": false,
   "pdflatex-paths": {
-    "miktex": "/home/ozank/bin/miktex-pdflatex",
-    "texlive": "/usr/bin/pdflatex"
   },
-  "last-distro": "/usr/bin/pdflatex"
+  "last-distro": ""
 }

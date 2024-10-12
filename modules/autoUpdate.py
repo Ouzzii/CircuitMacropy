@@ -54,7 +54,7 @@ def update():
     #repo.remote().pull()
     repo.git.reset('--hard', 'origin/main')
 
-    exit('0')
+    #exit('0')
 
 
 

@@ -13,6 +13,38 @@
     option:disabled {
         color: gray;
     }
+
+    #errorLogsShowDivision{
+        width: 100%;
+        height: 200px;
+        overflow-y: scroll;
+    }
+
+    .INFOo{
+        color: #424242 !important;  
+    }
+    .DEBUG{
+        color: #FFEB3B !important;
+    }
+    .ERROR{
+        color: #D32F2F !important;
+    }
+    .time{
+        color: #9E9E9E !important;
+    }
+    .module{
+        color: #FF9800 !important;
+    }
+    .message{
+        color: #424242 !important;
+    }
+    .errorRow{
+        font-size: bold;
+        background-color:rgb(219, 209, 209);
+        margin-bottom: 5px;
+    }
+
+
 </style>
 
 
@@ -21,6 +53,7 @@
         <li><a href="#tabs-1">Dosya Ayarları</a></li>
         <li><a href="#tabs-2">Güncellemeler</a></li>
         <li><a href="#tabs-3">LaTeX Ayarlari</a></li>
+        <li><a href="#tabs-4">Hata Kontrolü</a></li>
     </ul>
     <div id="tabs-1">
         <h3>Önemsiz Dosyalar</h3>
@@ -64,6 +97,18 @@
 
         </div>
     </div>
+    <div id="tabs-4">
+        <h3>Hata Kaydını Seçin</h3>
+        <select class="logName">
+
+        </select>
+        <button id="getLog">Kaydı Yükle</button>
+        <div id="errorLogsShowDivision">
+
+            
+        </div>
+    </div>
+
     <div class="apply">
         <button>Uygula</button>
     </div>

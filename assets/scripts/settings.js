@@ -92,15 +92,88 @@ $('body').on('click', '#ask_for_update .buttons img', function () {
 })
 
 /*
-$('.textInfo').hover(
-    function(){
-        console.log($(this).attr('id'))
-        eel.getinfo($(this).attr('id'))(function(info){
-            console.log(info)
-        })
-    },
-    function(){
-
-    }
-)
+Error Logs
 */
+$('body').on('click', '#settingsIcon', function(){
+    eel.getSessionLogs()(function(logs){
+        $('.logName').empty()
+        logs.forEach((item)=>{
+            const logRow = document.createElement('option')
+            logRow.textContent = item
+            $('.logName').append(logRow)
+        })
+
+
+        /*logs.forEach((item)=>{
+
+            const errorRow = document.createElement('div')
+            errorRow.className = 'errorRow'
+            const time = document.createElement('a')
+            const module = document.createElement('a')
+            const errorLevel = document.createElement('a')
+            const message = document.createElement('a')
+
+
+            time.textContent =  item[0]
+            time.className = 'time'
+            module.textContent = item[1]
+            module.className = 'module'
+            errorLevel.textContent = item[2]
+            errorLevel.className = 'errorLevel'
+            message.textContent = item[3]
+            message.className = 'message'
+
+            errorRow.appendChild(time)
+            errorRow.appendChild(module)
+            errorRow.appendChild(errorLevel)
+            errorRow.appendChild(message)
+
+            $('#errorLogsShowDivision').append(errorRow)
+            
+        })*/
+
+    })
+})
+
+
+
+$('body').on('click', '#getLog', function(){
+    $('#errorLogsShowDivision').empty()
+    eel.getSessionLog($('select.logname').find(":selected").val())(function(logs){
+        logs.forEach((item)=>{
+
+            const errorRow = document.createElement('div')
+            errorRow.className = 'errorRow'
+            const time = document.createElement('a')
+            const module = document.createElement('a')
+            const errorLevel = document.createElement('a')
+            const message = document.createElement('a')
+
+
+            time.textContent =  item[0] + ' '
+            time.className = 'time'
+            module.textContent = item[1] + ' '
+            module.className = 'module'
+            errorLevel.textContent = item[2] + ' '
+            if (item[2] == 'INFO'){
+                errorLevel.className = 'INFOo'
+            }else if (item[2] == 'DEBUG'){
+                errorLevel.className = 'DEBUG'
+            }else if (item[2] == 'ERROR'){
+                errorLevel.className = 'ERROR'
+            }
+            
+            
+            message.textContent = item[3] + ' '
+            message.className = 'message'
+
+            errorRow.appendChild(time)
+            errorRow.appendChild(module)
+            errorRow.appendChild(errorLevel)
+            errorRow.appendChild(message)
+
+            $('#errorLogsShowDivision').append(errorRow)
+            
+        })
+    })
+})

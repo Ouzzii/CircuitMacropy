@@ -26,15 +26,17 @@ from json import load, dump
 from tkinter import filedialog
 from base64 import b64encode
 from subprocess import Popen, PIPE
-import subprocess
+import subprocess, git
 from sys import platform
 
 from modules.createCircuitMacros import createCircuitMacros as csm
 from modules.autoUpdate import checkUpdate, version, update
 from modules.detect_tex_distros import detect_tex_distros, detect_boxdims_is_installed
 from modules.configuration_utils import readConf, writeConf
+from modules.checkConnection import internet_connection
 #from modules import detect_tex_distros
 
+from datetime import datetime
 import socket, logging
 from modules.configuration_utils import setup_logging
 setup_logging()
@@ -72,8 +74,14 @@ elif platform == 'linux':
 
 
 
-
-
+#check git repo
+if not os.path.exists('./.git'):
+    if internet_connection():
+        logger.debug('Git klasörü oluşturuldu.')
+        repo = git.Repo.init('./')
+        repo.create_remote('origin', 'https://github.com/Ouzzii/CircuitMacropy.git')
+    else:
+        logger.error('İnternet olmadığından git klasörü oluşturulamadı')
 def clearJunkFiles():
     conf = readConf()
     junkext = conf['junkfiles'].split(',')
@@ -331,6 +339,36 @@ def detect_pdflatex_version():
 def initialization():
     pass
 
+@eel.expose
+def getSessionLogs():
+    logs = os.listdir('./logs/')
+    return logs
+    #with open(f'./logs/{datetime.now().strftime("%Y-%m-%d")}.log', encoding="utf-8")as f:
+    #    for i in  f.readlines():
+    #        log.append(
+    #            [
+    #                i.split(" - ")[0],
+    #                i.split(" - ")[1],
+    #                i.split(" - ")[2],
+    #                i.split(" - ")[3]
+    #            ]
+    #        )
+    #return log
+@eel.expose
+def getSessionLog(logname):
+    log = []
+    with open(f'./logs/{logname}', encoding="utf-8")as f:
+        for i in  f.readlines():
+            log.append(
+                [
+                    i.split(" - ")[0],
+                    i.split(" - ")[1],
+                    i.split(" - ")[2],
+                    i.split(" - ")[3]
+                ]
+            )
+    return log
+    
 @eel.expose
 def select_distro(distro):
     conf = readConf()
