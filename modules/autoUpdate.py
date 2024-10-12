@@ -50,8 +50,11 @@ def update():
     #download_and_extract_specific_folder(repo_url, local_dir)
     #os.system('git pull')
 
-    repo = git.Repo(repo_url)
-    repo.remote().pull()
+    repo = git.Repo(local_dir)
+    #repo.remote().pull()
+    repo.git.reset('--hard', 'origin/main')
+
+    exit('0')
 
 
 

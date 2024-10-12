@@ -52,6 +52,9 @@ else:
 global ask_for_update
 global checked
 
+
+ask_for_update = True
+
 if platform == 'linux':
     m4executable = 'm4'
     dpicexecutable = 'dpic'
@@ -344,7 +347,7 @@ def check_selected_distro():
 if __name__ == '__main__':    
     conf = readConf()
     checked = checkUpdate(version)
-    if checked == "no_connection":
+    if checked != "no_connection":
         if 'autoupdate' in list(conf.keys()):
             ask_for_update = False
             otoupdate = conf['autoupdate']
