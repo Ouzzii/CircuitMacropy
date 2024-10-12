@@ -1,5 +1,5 @@
 from requests import get
-import shutil, os
+import shutil, os, git
 import zipfile
 import io
 from .checkConnection import internet_connection
@@ -48,7 +48,12 @@ def update():
     local_dir = os.getcwd()
     #clearDirectory(local_dir)
     #download_and_extract_specific_folder(repo_url, local_dir)
-    os.system('git pull')
+    #os.system('git pull')
+
+    repo = git.Repo(repo_url)
+    repo.remote().pull()
+
+
 
 def checkUpdate(version):
     if internet_connection():
