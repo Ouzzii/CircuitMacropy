@@ -1,0 +1,569 @@
+2024-10-14 09:05:21,646 - modules.checkConnection - DEBUG - İnternet bağlantısı kontrol ediliyor
+2024-10-14 09:05:21,702 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+2024-10-14 09:05:22,152 - urllib3.connectionpool - DEBUG - https://raw.githubusercontent.com:443 "GET /Ouzzii/CircuitMacropy/main/modules/__version__.py HTTP/1.1" 200 34
+2024-10-14 09:05:30,537 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,538 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,540 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET //html/main.html HTTP/1.1" 200 3441 0.002414
+2024-10-14 09:05:30,781 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,781 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,783 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET //styles/mainpage.css HTTP/1.1" 200 380 0.002485
+2024-10-14 09:05:30,787 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,787 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,788 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET //styles/treeview.css HTTP/1.1" 200 2835 0.001053
+2024-10-14 09:05:30,789 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,789 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,789 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET //styles/notifications.css HTTP/1.1" 200 2565 0.000750
+2024-10-14 09:05:30,790 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,790 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,791 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET //styles/ask_for_update.css HTTP/1.1" 200 645 0.000737
+2024-10-14 09:05:30,791 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,791 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,792 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET //styles/settings.css HTTP/1.1" 200 1559 0.000746
+2024-10-14 09:05:30,792 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,793 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,794 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET //styles/preview.css HTTP/1.1" 200 953 0.001108
+2024-10-14 09:05:30,794 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,794 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,795 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET //styles/editor.css HTTP/1.1" 200 2585 0.000759
+2024-10-14 09:05:30,802 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,803 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,804 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET /eel.js HTTP/1.1" 200 6421 0.001949
+2024-10-14 09:05:30,805 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,805 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,806 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET //styles/boxdims_errors.css HTTP/1.1" 200 1361 0.000836
+2024-10-14 09:05:30,823 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,823 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,824 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET //scripts/script.js HTTP/1.1" 200 7006 0.001079
+2024-10-14 09:05:30,829 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,830 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,830 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET //scripts/error_logs.js HTTP/1.1" 200 3422 0.000881
+2024-10-14 09:05:30,858 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,858 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,859 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET //scripts/previewpdf.js HTTP/1.1" 200 5049 0.001092
+2024-10-14 09:05:30,860 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,860 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,861 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET //scripts/settings.js HTTP/1.1" 200 5509 0.001048
+2024-10-14 09:05:30,862 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,862 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,863 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET //scripts/tree.js HTTP/1.1" 200 12985 0.000763
+2024-10-14 09:05:30,864 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,864 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,865 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET //scripts/pdfpreview.js HTTP/1.1" 200 316 0.000974
+2024-10-14 09:05:30,869 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,870 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,870 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET //html/loading.html HTTP/1.1" 200 586 0.000840
+2024-10-14 09:05:30,871 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,871 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,871 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET //scripts/compile.js HTTP/1.1" 200 2362 0.000603
+2024-10-14 09:05:30,875 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,875 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,876 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:05:30] "GET //scripts/hotkeys.js HTTP/1.1" 200 4048 0.001067
+2024-10-14 09:05:30,951 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:05:30,952 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:05:30,952 - geventwebsocket.handler - DEBUG - Attempting to upgrade connection
+2024-10-14 09:05:30,952 - geventwebsocket.handler - DEBUG - WebSocket request accepted, switching protocols
+2024-10-14 09:05:31,002 - modules.detect_tex_distros - DEBUG - Miktex kontrol ediliyor
+2024-10-14 09:05:43,372 - modules.detect_tex_distros - DEBUG - Diğer TeX dağıtımları kontrol ediliyor
+2024-10-14 09:05:43,384 - modules.detect_tex_distros - DEBUG - Miktex için boxdims.sty kontrolü yapılıyor
+2024-10-14 09:05:43,385 - modules.detect_tex_distros - INFO - Miktex: boxdims.sty zaten kurulu
+2024-10-14 09:05:43,385 - modules.detect_tex_distros - DEBUG - Texlive için boxdims.sty kontrolü yapılıyor
+2024-10-14 09:05:47,534 - modules.checkConnection - DEBUG - İnternet bağlantısı kontrol ediliyor
+2024-10-14 09:05:55,936 - modules.detect_tex_distros - ERROR - stderr: --2024-10-14 09:05:50--  https://mirrors.ctan.org/graphics/circuit_macros.zip
+Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+Resolving mirrors.ctan.org (mirrors.ctan.org)... 89.58.7.101, 2a03:4000:5e:d33::1
+Connecting to mirrors.ctan.org (mirrors.ctan.org)|89.58.7.101|:443... connected.
+HTTP request sent, awaiting response... 307 Temporary Redirect
+Location: https://ftp.cc.uoc.gr/mirrors/CTAN/graphics/circuit_macros.zip [following]
+--2024-10-14 09:05:51--  https://ftp.cc.uoc.gr/mirrors/CTAN/graphics/circuit_macros.zip
+Resolving ftp.cc.uoc.gr (ftp.cc.uoc.gr)... 147.52.159.50, 2001:648:2c00:6c08::2
+Connecting to ftp.cc.uoc.gr (ftp.cc.uoc.gr)|147.52.159.50|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3794952 (3,6M) [application/zip]
+Saving to: ‘/usr/share/texmf-dist/tex/latex/circuit_macros.zip.3’
+
+     0K .......... .......... .......... .......... ..........  1%  232K 16s
+    50K .......... .......... .......... .......... ..........  2% 1,69M 9s
+   100K .......... .......... .......... .......... ..........  4%  483K 8s
+   150K .......... .......... .......... .......... ..........  5%  536K 8s
+   200K .......... .......... .......... .......... ..........  6% 2,25M 6s
+   250K .......... .......... .......... .......... ..........  8% 2,35M 5s
+   300K .......... .......... .......... .......... ..........  9%  674K 5s
+   350K .......... .......... .......... .......... .......... 10%  785K 5s
+   400K .......... .......... .......... .......... .......... 12%  683K 5s
+   450K .......... .......... .......... .......... .......... 13%  893K 5s
+   500K .......... .......... .......... .......... .......... 14% 1,55M 4s
+   550K .......... .......... .......... .......... .......... 16% 4,98M 4s
+   600K .......... .......... .......... .......... .......... 17% 1,61M 4s
+   650K .......... .......... .......... .......... .......... 18%  795K 4s
+   700K .......... .......... .......... .......... .......... 20% 1,50M 4s
+   750K .......... .......... .......... .......... .......... 21% 2,56M 3s
+   800K .......... .......... .......... .......... .......... 22% 1003K 3s
+   850K .......... .......... .......... .......... .......... 24% 1,17M 3s
+   900K .......... .......... .......... .......... .......... 25% 2,99M 3s
+   950K .......... .......... .......... .......... .......... 26% 2,58M 3s
+  1000K .......... .......... .......... .......... .......... 28% 1,14M 3s
+  1050K .......... .......... .......... .......... .......... 29%  707K 3s
+  1100K .......... .......... .......... .......... .......... 31% 7,79M 3s
+  1150K .......... .......... .......... .......... .......... 32% 2,05M 3s
+  1200K .......... .......... .......... .......... .......... 33% 1,51M 2s
+  1250K .......... .......... .......... .......... .......... 35%  740K 2s
+  1300K .......... .......... .......... .......... .......... 36% 4,75M 2s
+  1350K .......... .......... .......... .......... .......... 37% 1,19M 2s
+  1400K .......... .......... .......... .......... .......... 39% 1,58M 2s
+  1450K .......... .......... .......... .......... .......... 40% 1,24M 2s
+  1500K .......... .......... .......... .......... .......... 41% 2,27M 2s
+  1550K .......... .......... .......... .......... .......... 43% 1,34M 2s
+  1600K .......... .......... .......... .......... .......... 44% 2,27M 2s
+  1650K .......... .......... .......... .......... .......... 45%  675K 2s
+  1700K .......... .......... .......... .......... .......... 47%  836K 2s
+  1750K .......... .......... .......... .......... .......... 48% 1,39M 2s
+  1800K .......... .......... .......... .......... .......... 49% 1,95M 2s
+  1850K .......... .......... .......... .......... .......... 51% 3,05M 2s
+  1900K .......... .......... .......... .......... .......... 52% 1,48M 2s
+  1950K .......... .......... .......... .......... .......... 53% 1,17M 2s
+  2000K .......... .......... .......... .......... .......... 55% 2,71M 1s
+  2050K .......... .......... .......... .......... .......... 56% 1,93M 1s
+  2100K .......... .......... .......... .......... .......... 58% 3,77M 1s
+  2150K .......... .......... .......... .......... .......... 59% 1,97M 1s
+  2200K .......... .......... .......... .......... .......... 60% 1,24M 1s
+  2250K .......... .......... .......... .......... .......... 62% 3,56M 1s
+  2300K .......... .......... .......... .......... .......... 63% 1,85M 1s
+  2350K .......... .......... .......... .......... .......... 64% 2,72M 1s
+  2400K .......... .......... .......... .......... .......... 66% 1,91M 1s
+  2450K .......... .......... .......... .......... .......... 67% 2,40M 1s
+  2500K .......... .......... .......... .......... .......... 68% 1,97M 1s
+  2550K .......... .......... .......... .......... .......... 70% 2,30M 1s
+  2600K .......... .......... .......... .......... .......... 71%  773K 1s
+  2650K .......... .......... .......... .......... .......... 72% 8,25M 1s
+  2700K .......... .......... .......... .......... .......... 74% 4,73M 1s
+  2750K .......... .......... .......... .......... .......... 75% 9,26M 1s
+  2800K .......... .......... .......... .......... .......... 76% 1016K 1s
+  2850K .......... .......... .......... .......... .......... 78%  578K 1s
+  2900K .......... .......... .......... .......... .......... 79% 1,01M 1s
+  2950K .......... .......... .......... .......... .......... 80% 3,70M 1s
+  3000K .......... .......... .......... .......... .......... 82% 2,51M 1s
+  3050K .......... .......... .......... .......... .......... 83%  466K 0s
+  3100K .......... .......... .......... .......... .......... 84%  306K 0s
+  3150K .......... .......... .......... .......... .......... 86%  607K 0s
+  3200K .......... .......... .......... .......... .......... 87%  915K 0s
+  3250K .......... .......... .......... .......... .......... 89% 2,55M 0s
+  3300K .......... .......... .......... .......... .......... 90% 1,45M 0s
+  3350K .......... .......... .......... .......... .......... 91% 1,40M 0s
+  3400K .......... .......... .......... .......... .......... 93% 2,08M 0s
+  3450K .......... .......... .......... .......... .......... 94% 2,34M 0s
+  3500K .......... .......... .......... .......... .......... 95% 1,58M 0s
+  3550K .......... .......... .......... .......... .......... 97% 1,25M 0s
+  3600K .......... .......... .......... .......... .......... 98% 2,20M 0s
+  3650K .......... .......... .......... .......... .......... 99% 3,45M 0s
+  3700K ......                                                100% 11,2T=3,0s
+
+2024-10-14 09:05:55 (1,20 MB/s) - ‘/usr/share/texmf-dist/tex/latex/circuit_macros.zip.3’ saved [3794952/3794952]
+
+  End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+unzip:  cannot find zipfile directory in one of /usr/share/texmf-dist/tex/latex/circuit_macros.zip or
+        /usr/share/texmf-dist/tex/latex/circuit_macros.zip.zip, and cannot find /usr/share/texmf-dist/tex/latex/circuit_macros.zip.ZIP, period.
+2024-10-14 09:05:55,937 - modules.detect_tex_distros - ERROR - stdout: Archive:  /usr/share/texmf-dist/tex/latex/circuit_macros.zip
+2024-10-14 09:07:51,033 - __main__ - DEBUG - /home/ozank/Desktop/abcd/first.m4: compiling from pgf to pdf
+2024-10-14 09:10:46,575 - __main__ - DEBUG - /home/ozank/Desktop/abcd/first.m4: compiling from pgf to pdf
+2024-10-14 09:11:59,249 - __main__ - DEBUG - /home/ozank/Desktop/abcd/first.m4: compiling from pgf to pdf
+2024-10-14 09:12:27,034 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,034 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,038 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //html/main.html HTTP/1.1" 200 3441 0.003409
+2024-10-14 09:12:27,052 - geventwebsocket.handler - DEBUG - Closed WebSocket
+2024-10-14 09:12:27,054 - geventwebsocket.handler - DEBUG - Failed to write closing frame -> closing socket
+2024-10-14 09:12:27,054 - geventwebsocket.handler - DEBUG - Closed WebSocket
+2024-10-14 09:12:27,059 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,059 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,061 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //styles/mainpage.css HTTP/1.1" 200 380 0.001739
+2024-10-14 09:12:27,064 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,064 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,065 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //styles/treeview.css HTTP/1.1" 200 2835 0.001377
+2024-10-14 09:12:27,066 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,066 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,067 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //styles/ask_for_update.css HTTP/1.1" 200 645 0.000992
+2024-10-14 09:12:27,068 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,068 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,069 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //styles/settings.css HTTP/1.1" 200 1559 0.000899
+2024-10-14 09:12:27,069 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,069 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,070 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //styles/preview.css HTTP/1.1" 200 953 0.000860
+2024-10-14 09:12:27,071 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,071 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,072 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //styles/editor.css HTTP/1.1" 200 2585 0.000917
+2024-10-14 09:12:27,072 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,073 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,074 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //styles/notifications.css HTTP/1.1" 200 2565 0.001241
+2024-10-14 09:12:27,076 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,077 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,078 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //styles/boxdims_errors.css HTTP/1.1" 200 1361 0.001600
+2024-10-14 09:12:27,078 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,079 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,079 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //scripts/error_logs.js HTTP/1.1" 200 3422 0.000953
+2024-10-14 09:12:27,080 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,080 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,081 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //scripts/script.js HTTP/1.1" 200 7006 0.000766
+2024-10-14 09:12:27,081 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,081 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,082 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET /eel.js HTTP/1.1" 200 6421 0.000553
+2024-10-14 09:12:27,127 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,127 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,128 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //scripts/previewpdf.js HTTP/1.1" 200 5049 0.001260
+2024-10-14 09:12:27,132 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,133 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,134 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //scripts/pdfpreview.js HTTP/1.1" 200 316 0.001370
+2024-10-14 09:12:27,135 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,135 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,136 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //scripts/hotkeys.js HTTP/1.1" 200 4048 0.001103
+2024-10-14 09:12:27,137 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,137 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,138 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //scripts/compile.js HTTP/1.1" 200 2362 0.001773
+2024-10-14 09:12:27,139 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,139 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,140 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //scripts/settings.js HTTP/1.1" 200 5509 0.001125
+2024-10-14 09:12:27,142 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,142 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,143 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //scripts/tree.js HTTP/1.1" 200 12985 0.001221
+2024-10-14 09:12:27,171 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,172 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,173 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //html/loading.html HTTP/1.1" 200 586 0.001057
+2024-10-14 09:12:27,201 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,203 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,203 - geventwebsocket.handler - DEBUG - Attempting to upgrade connection
+2024-10-14 09:12:27,205 - geventwebsocket.handler - DEBUG - WebSocket request accepted, switching protocols
+2024-10-14 09:12:27,237 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:12:27,237 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:12:27,238 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:12:27] "GET //images/favicon.ico HTTP/1.1" 200 13306 0.001586
+2024-10-14 09:15:02,317 - modules.checkConnection - DEBUG - İnternet bağlantısı kontrol ediliyor
+2024-10-14 09:15:02,518 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+2024-10-14 09:15:03,247 - urllib3.connectionpool - DEBUG - https://raw.githubusercontent.com:443 "GET /Ouzzii/CircuitMacropy/main/modules/__version__.py HTTP/1.1" 200 34
+2024-10-14 09:15:11,559 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,561 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,567 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET //html/main.html HTTP/1.1" 200 3441 0.007957
+2024-10-14 09:15:11,808 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,808 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,811 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET //styles/mainpage.css HTTP/1.1" 200 380 0.002600
+2024-10-14 09:15:11,814 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,815 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,816 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET //styles/treeview.css HTTP/1.1" 200 2835 0.001749
+2024-10-14 09:15:11,818 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,818 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,819 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET //styles/notifications.css HTTP/1.1" 200 2565 0.001189
+2024-10-14 09:15:11,820 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,820 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,821 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET //styles/ask_for_update.css HTTP/1.1" 200 645 0.001190
+2024-10-14 09:15:11,822 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,822 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,824 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET //styles/settings.css HTTP/1.1" 200 1559 0.001604
+2024-10-14 09:15:11,825 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,825 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,826 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET //styles/preview.css HTTP/1.1" 200 953 0.001764
+2024-10-14 09:15:11,828 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,829 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,831 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET //styles/editor.css HTTP/1.1" 200 2585 0.002491
+2024-10-14 09:15:11,834 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,835 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,835 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET /eel.js HTTP/1.1" 200 6421 0.000993
+2024-10-14 09:15:11,836 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,836 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,837 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET //styles/boxdims_errors.css HTTP/1.1" 200 1361 0.001176
+2024-10-14 09:15:11,853 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,853 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,854 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET //scripts/script.js HTTP/1.1" 200 7006 0.001430
+2024-10-14 09:15:11,858 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,858 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,859 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET //scripts/error_logs.js HTTP/1.1" 200 3422 0.001141
+2024-10-14 09:15:11,891 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,891 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,892 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET //scripts/previewpdf.js HTTP/1.1" 200 5049 0.001094
+2024-10-14 09:15:11,893 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,893 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,894 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET //scripts/settings.js HTTP/1.1" 200 5509 0.000982
+2024-10-14 09:15:11,894 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,894 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,895 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET //scripts/tree.js HTTP/1.1" 200 12985 0.000880
+2024-10-14 09:15:11,896 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,896 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,897 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET //scripts/pdfpreview.js HTTP/1.1" 200 316 0.000914
+2024-10-14 09:15:11,902 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,902 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,903 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET //html/loading.html HTTP/1.1" 200 586 0.001235
+2024-10-14 09:15:11,903 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,904 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,904 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET //scripts/compile.js HTTP/1.1" 200 2362 0.000625
+2024-10-14 09:15:11,907 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:11,907 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:11,908 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:15:11] "GET //scripts/hotkeys.js HTTP/1.1" 200 4048 0.001118
+2024-10-14 09:15:12,007 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:15:12,007 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:15:12,008 - geventwebsocket.handler - DEBUG - Attempting to upgrade connection
+2024-10-14 09:15:12,010 - geventwebsocket.handler - DEBUG - WebSocket request accepted, switching protocols
+2024-10-14 09:15:52,442 - modules.checkConnection - DEBUG - İnternet bağlantısı kontrol ediliyor
+2024-10-14 09:15:52,917 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+2024-10-14 09:15:53,166 - urllib3.connectionpool - DEBUG - https://raw.githubusercontent.com:443 "GET /Ouzzii/CircuitMacropy/main/modules/__version__.py HTTP/1.1" 200 34
+2024-10-14 09:16:01,490 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,491 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,504 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET //html/main.html HTTP/1.1" 200 3441 0.011568
+2024-10-14 09:16:01,701 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,702 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,705 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET //styles/mainpage.css HTTP/1.1" 200 380 0.004244
+2024-10-14 09:16:01,706 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,706 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,707 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET //styles/treeview.css HTTP/1.1" 200 2835 0.000984
+2024-10-14 09:16:01,711 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,712 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,714 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET //styles/editor.css HTTP/1.1" 200 2585 0.002159
+2024-10-14 09:16:01,716 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,716 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,717 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET //styles/boxdims_errors.css HTTP/1.1" 200 1361 0.001252
+2024-10-14 09:16:01,718 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,718 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,719 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET //styles/notifications.css HTTP/1.1" 200 2565 0.001134
+2024-10-14 09:16:01,720 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,720 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,721 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET //styles/ask_for_update.css HTTP/1.1" 200 645 0.001170
+2024-10-14 09:16:01,722 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,722 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,723 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET //styles/settings.css HTTP/1.1" 200 1559 0.001119
+2024-10-14 09:16:01,724 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,724 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,726 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET //styles/preview.css HTTP/1.1" 200 953 0.001790
+2024-10-14 09:16:01,730 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,731 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,732 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET /eel.js HTTP/1.1" 200 6421 0.001127
+2024-10-14 09:16:01,750 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,750 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,751 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET //scripts/script.js HTTP/1.1" 200 7006 0.001270
+2024-10-14 09:16:01,754 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,755 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,756 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET //scripts/error_logs.js HTTP/1.1" 200 3422 0.001081
+2024-10-14 09:16:01,786 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,786 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,787 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET //scripts/previewpdf.js HTTP/1.1" 200 5049 0.001483
+2024-10-14 09:16:01,788 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,788 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,790 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET //scripts/settings.js HTTP/1.1" 200 5509 0.001318
+2024-10-14 09:16:01,790 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,790 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,791 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET //scripts/tree.js HTTP/1.1" 200 12985 0.000936
+2024-10-14 09:16:01,792 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,792 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,793 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET //scripts/pdfpreview.js HTTP/1.1" 200 316 0.000786
+2024-10-14 09:16:01,797 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,797 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,798 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET //html/loading.html HTTP/1.1" 200 586 0.001098
+2024-10-14 09:16:01,801 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,801 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,802 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET //scripts/compile.js HTTP/1.1" 200 2362 0.000970
+2024-10-14 09:16:01,803 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,803 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,804 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:16:01] "GET //scripts/hotkeys.js HTTP/1.1" 200 4048 0.000975
+2024-10-14 09:16:01,899 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:16:01,899 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:16:01,899 - geventwebsocket.handler - DEBUG - Attempting to upgrade connection
+2024-10-14 09:16:01,903 - geventwebsocket.handler - DEBUG - WebSocket request accepted, switching protocols
+2024-10-14 09:18:33,388 - modules.checkConnection - DEBUG - İnternet bağlantısı kontrol ediliyor
+2024-10-14 09:18:33,878 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+2024-10-14 09:18:34,120 - urllib3.connectionpool - DEBUG - https://raw.githubusercontent.com:443 "GET /Ouzzii/CircuitMacropy/main/modules/__version__.py HTTP/1.1" 200 34
+2024-10-14 09:18:41,465 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,465 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,472 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET //html/main.html HTTP/1.1" 200 3441 0.006725
+2024-10-14 09:18:41,719 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,720 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,721 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET //styles/mainpage.css HTTP/1.1" 200 380 0.002038
+2024-10-14 09:18:41,722 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,723 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,724 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET //styles/ask_for_update.css HTTP/1.1" 200 645 0.001622
+2024-10-14 09:18:41,725 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,725 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,726 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET //styles/settings.css HTTP/1.1" 200 1559 0.001304
+2024-10-14 09:18:41,728 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,728 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,730 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET //styles/preview.css HTTP/1.1" 200 953 0.001685
+2024-10-14 09:18:41,732 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,732 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,734 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET //styles/editor.css HTTP/1.1" 200 2585 0.002173
+2024-10-14 09:18:41,735 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,735 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,736 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET //styles/treeview.css HTTP/1.1" 200 2835 0.001029
+2024-10-14 09:18:41,745 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,746 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,747 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET //styles/notifications.css HTTP/1.1" 200 2565 0.001685
+2024-10-14 09:18:41,749 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,749 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,750 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET //styles/boxdims_errors.css HTTP/1.1" 200 1361 0.001195
+2024-10-14 09:18:41,751 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,751 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,752 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET /eel.js HTTP/1.1" 200 6421 0.000982
+2024-10-14 09:18:41,808 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,808 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,809 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET //scripts/script.js HTTP/1.1" 200 7006 0.001696
+2024-10-14 09:18:41,821 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,821 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,823 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET //scripts/error_logs.js HTTP/1.1" 200 3422 0.001997
+2024-10-14 09:18:41,824 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,824 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,827 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET //scripts/settings.js HTTP/1.1" 200 5509 0.002689
+2024-10-14 09:18:41,828 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,828 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,829 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET //scripts/tree.js HTTP/1.1" 200 12985 0.001112
+2024-10-14 09:18:41,830 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,830 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,831 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET //scripts/pdfpreview.js HTTP/1.1" 200 316 0.001194
+2024-10-14 09:18:41,832 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,832 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,835 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET //scripts/previewpdf.js HTTP/1.1" 200 5049 0.002837
+2024-10-14 09:18:41,836 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,836 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,837 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET //scripts/compile.js HTTP/1.1" 200 2362 0.000936
+2024-10-14 09:18:41,838 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,838 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,839 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET //scripts/hotkeys.js HTTP/1.1" 200 4048 0.001196
+2024-10-14 09:18:41,850 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:41,851 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:41,853 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:18:41] "GET //html/loading.html HTTP/1.1" 200 586 0.002654
+2024-10-14 09:18:42,080 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:18:42,080 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:18:42,080 - geventwebsocket.handler - DEBUG - Attempting to upgrade connection
+2024-10-14 09:18:42,086 - geventwebsocket.handler - DEBUG - WebSocket request accepted, switching protocols
+2024-10-14 09:19:45,123 - __main__ - DEBUG - /home/ozank/Desktop/abcd/first.m4: compiling from pgf to pdf
+2024-10-14 09:19:53,567 - __main__ - DEBUG - /home/ozank/Desktop/abcd/first.m4: compiling from pgf to pdf
+2024-10-14 09:21:11,730 - __main__ - DEBUG - /home/ozank/Desktop/abcd/first.m4: compiling from pgf to pdf
+2024-10-14 09:21:37,351 - __main__ - DEBUG - /home/ozank/Desktop/abcd/first.m4: compiling from pgf to pdf
+2024-10-14 09:21:47,626 - __main__ - DEBUG - /home/ozank/Desktop/abcd/first.m4: compiling from pgf to pdf
+2024-10-14 09:23:20,282 - modules.checkConnection - DEBUG - İnternet bağlantısı kontrol ediliyor
+2024-10-14 09:23:20,335 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+2024-10-14 09:23:20,729 - urllib3.connectionpool - DEBUG - https://raw.githubusercontent.com:443 "GET /Ouzzii/CircuitMacropy/main/modules/__version__.py HTTP/1.1" 200 34
+2024-10-14 09:23:28,822 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:28,822 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:28,824 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:28] "GET //html/main.html HTTP/1.1" 200 3441 0.002195
+2024-10-14 09:23:29,069 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,070 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,074 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:29] "GET //styles/mainpage.css HTTP/1.1" 200 380 0.004716
+2024-10-14 09:23:29,076 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,077 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,080 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:29] "GET //styles/treeview.css HTTP/1.1" 200 2835 0.003742
+2024-10-14 09:23:29,089 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,089 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,093 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:29] "GET //styles/boxdims_errors.css HTTP/1.1" 200 1361 0.003499
+2024-10-14 09:23:29,094 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,095 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,096 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:29] "GET //styles/notifications.css HTTP/1.1" 200 2565 0.001945
+2024-10-14 09:23:29,098 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,098 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,099 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:29] "GET //styles/ask_for_update.css HTTP/1.1" 200 645 0.001477
+2024-10-14 09:23:29,101 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,101 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,102 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:29] "GET //styles/settings.css HTTP/1.1" 200 1559 0.001537
+2024-10-14 09:23:29,105 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,106 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,107 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:29] "GET //styles/preview.css HTTP/1.1" 200 953 0.001356
+2024-10-14 09:23:29,107 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,108 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,108 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:29] "GET //styles/editor.css HTTP/1.1" 200 2585 0.000893
+2024-10-14 09:23:29,124 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,125 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,125 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:29] "GET /eel.js HTTP/1.1" 200 6421 0.000947
+2024-10-14 09:23:29,149 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,149 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,151 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:29] "GET //scripts/script.js HTTP/1.1" 200 7006 0.001550
+2024-10-14 09:23:29,159 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,159 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,161 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:29] "GET //scripts/error_logs.js HTTP/1.1" 200 3422 0.001547
+2024-10-14 09:23:29,184 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,185 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,186 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:29] "GET //scripts/settings.js HTTP/1.1" 200 5509 0.001504
+2024-10-14 09:23:29,187 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,187 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,188 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:29] "GET //scripts/tree.js HTTP/1.1" 200 12985 0.001326
+2024-10-14 09:23:29,189 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,190 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,191 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:29] "GET //scripts/pdfpreview.js HTTP/1.1" 200 316 0.001408
+2024-10-14 09:23:29,192 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,192 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,193 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:29] "GET //scripts/previewpdf.js HTTP/1.1" 200 5049 0.001698
+2024-10-14 09:23:29,200 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,201 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,202 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:29] "GET //html/loading.html HTTP/1.1" 200 586 0.001365
+2024-10-14 09:23:29,203 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,203 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,204 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:29] "GET //scripts/hotkeys.js HTTP/1.1" 200 4048 0.001711
+2024-10-14 09:23:29,205 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,205 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,208 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 09:23:29] "GET //scripts/compile.js HTTP/1.1" 200 2362 0.002964
+2024-10-14 09:23:29,299 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 09:23:29,299 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 09:23:29,299 - geventwebsocket.handler - DEBUG - Attempting to upgrade connection
+2024-10-14 09:23:29,300 - geventwebsocket.handler - DEBUG - WebSocket request accepted, switching protocols
+2024-10-14 09:23:39,550 - __main__ - DEBUG - /home/ozank/Desktop/abcd/first.m4: compiling from pgf to pdf
+2024-10-14 10:45:16,448 - modules.checkConnection - DEBUG - İnternet bağlantısı kontrol ediliyor
+2024-10-14 10:45:24,591 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,591 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,592 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET //html/main.html HTTP/1.1" 200 3441 0.001568
+2024-10-14 10:45:24,830 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,830 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,831 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET //styles/mainpage.css HTTP/1.1" 200 380 0.001300
+2024-10-14 10:45:24,837 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,837 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,838 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET //styles/treeview.css HTTP/1.1" 200 2835 0.001140
+2024-10-14 10:45:24,839 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,839 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,840 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET //styles/notifications.css HTTP/1.1" 200 2565 0.001136
+2024-10-14 10:45:24,841 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,841 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,842 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET //styles/ask_for_update.css HTTP/1.1" 200 645 0.001040
+2024-10-14 10:45:24,843 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,843 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,844 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET //styles/settings.css HTTP/1.1" 200 1559 0.001045
+2024-10-14 10:45:24,844 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,844 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,845 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET //styles/preview.css HTTP/1.1" 200 953 0.000917
+2024-10-14 10:45:24,846 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,846 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,847 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET //styles/editor.css HTTP/1.1" 200 2585 0.000964
+2024-10-14 10:45:24,852 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,852 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,853 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET //styles/boxdims_errors.css HTTP/1.1" 200 1361 0.001047
+2024-10-14 10:45:24,854 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,854 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,856 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET /eel.js HTTP/1.1" 200 6421 0.001271
+2024-10-14 10:45:24,869 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,869 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,870 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET //scripts/script.js HTTP/1.1" 200 7006 0.000965
+2024-10-14 10:45:24,873 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,873 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,874 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET //scripts/error_logs.js HTTP/1.1" 200 3422 0.000822
+2024-10-14 10:45:24,908 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,908 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,908 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET //scripts/previewpdf.js HTTP/1.1" 200 5049 0.000814
+2024-10-14 10:45:24,909 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,909 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,910 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET //scripts/settings.js HTTP/1.1" 200 5509 0.000984
+2024-10-14 10:45:24,911 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,911 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,911 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET //scripts/tree.js HTTP/1.1" 200 12985 0.000723
+2024-10-14 10:45:24,912 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,912 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,913 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET //scripts/pdfpreview.js HTTP/1.1" 200 316 0.000597
+2024-10-14 10:45:24,917 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,917 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,917 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET //html/loading.html HTTP/1.1" 200 586 0.000906
+2024-10-14 10:45:24,918 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,918 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,919 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET //scripts/compile.js HTTP/1.1" 200 2362 0.000629
+2024-10-14 10:45:24,921 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:24,922 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:24,922 - geventwebsocket.handler - INFO - 127.0.0.1 - - [2024-10-14 10:45:24] "GET //scripts/hotkeys.js HTTP/1.1" 200 4048 0.000897
+2024-10-14 10:45:25,010 - geventwebsocket.handler - DEBUG - Initializing WebSocket
+2024-10-14 10:45:25,011 - geventwebsocket.handler - DEBUG - Validating WebSocket request
+2024-10-14 10:45:25,011 - geventwebsocket.handler - DEBUG - Attempting to upgrade connection
+2024-10-14 10:45:25,011 - geventwebsocket.handler - DEBUG - WebSocket request accepted, switching protocols
+2024-10-14 10:46:36,826 - __main__ - DEBUG - /home/ozank/Desktop/abcd/first.m4: compiling from pgf to pdf
+2024-10-14 10:47:03,161 - __main__ - DEBUG - /home/ozank/Desktop/abcd/first.m4: compiling from pgf to pdf
+2024-10-14 10:47:18,904 - __main__ - DEBUG - /home/ozank/Desktop/abcd/first.m4: compiling from pgf to pdf
+2024-10-14 10:47:27,353 - __main__ - DEBUG - /home/ozank/Desktop/abcd/first.m4: compiling from pgf to pdf
+2024-10-14 10:47:42,163 - geventwebsocket.handler - DEBUG - Closed WebSocket
+2024-10-14 10:47:42,163 - geventwebsocket.handler - DEBUG - Failed to write closing frame -> closing socket
+2024-10-14 10:47:42,164 - geventwebsocket.handler - DEBUG - Closed WebSocket

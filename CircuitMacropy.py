@@ -251,6 +251,7 @@ def compile(basecontent, compileas, compileto):
     os.chdir(projectPath)
     
     print(m4_stdout)
+    print(pdflatex_stdout)
     
     if compileto == 'pdf' and 'Output written on' in pdflatex_stdout:
         return {'message': 'compile successful',
@@ -359,14 +360,17 @@ def getSessionLog(logname):
     log = []
     with open(f'./logs/{logname}', encoding="utf-8")as f:
         for i in  f.readlines():
-            log.append(
-                [
-                    i.split(" - ")[0],
-                    i.split(" - ")[1],
-                    i.split(" - ")[2],
-                    i.split(" - ")[3]
-                ]
-            )
+            try:
+                log.append(
+                    [
+                        i.split(" - ")[0],
+                        i.split(" - ")[1],
+                        i.split(" - ")[2],
+                        i.split(" - ")[3]
+                    ]
+                )
+            except IndexError:
+                log.append([i])
     return log
     
 @eel.expose
