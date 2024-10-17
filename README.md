@@ -5,7 +5,10 @@ CircuitMacropy en basit tanımı ile m4 programlama dilini kullanarak çizimleri
 
 # Nasıl Kullanılır?
 
-CircuitMacropy python yazılım dilini kullanarak yazılmıştır ve bundan dolayı kullanılabilmesi için cihazınızda python 3.10 versiyonu bulunması gerekmektedir
+CircuitMacropy python yazılım dilini kullanarak yazılmıştır ve bundan dolayı kullanılabilmesi için cihazınızda python 3.10 versiyonu bulunması gerekmektedir. Ayrıca otomatik güncelleme işlemleri için git uygulamasının cihazınızda bulunması gerekmektedir.
+
+git: https://git-scm.com/downloads/win
+Python3.10: https://www.python.org/downloads/release/python-31011/
 
 ## İlgili sürümün yüklenmesi
 
